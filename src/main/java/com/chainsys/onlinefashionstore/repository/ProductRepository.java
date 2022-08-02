@@ -8,8 +8,14 @@ import org.springframework.stereotype.Repository;
 import com.chainsys.onlinefashionstore.model.Product;
 @Repository
 public interface ProductRepository extends JpaRepository<Product,Long>{
-	List<Product> findAllByProduct_Id(int id);
-	Product findById(int id);
+	List<Product> findAllById();
+	Product save(Product product);
+
+	// use for adding a new doctor
+	void deleteById(long productId);
+
+	List<Product> findAll();
+	List<Product> findAllById(long id);
 
 }
 

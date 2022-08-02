@@ -12,8 +12,9 @@ import com.chainsys.onlinefashionstore.repository.ProductRepository;
 public class ProductService {
 	@Autowired
 	ProductRepository productRepository;
-	public Product findById(int id){
-	    return productRepository.findById(id);
+	
+	public List<Product> findById(int id){
+	    return productRepository.findAllById(id);
 	}
 
 	public List<Product> getAllProducts() {
@@ -32,7 +33,7 @@ public class ProductService {
 		return productRepository.getById(id);
 	}
 
-	public List<Product> getAllProductByCategoryId(int id) {
-		return productRepository.findAllByProduct_Id(id);
+	public List<Product> getAllProductByCategoryId(long id) {
+		return productRepository.findAllById(id);
 	}
 }

@@ -13,6 +13,8 @@ import javax.persistence.Table;
 @Table(name = "BILLING_INVOICE")
 
 public class BillingInvoice {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int userId;
 	private int productId;
 	private int quantity;
@@ -22,8 +24,7 @@ public class BillingInvoice {
 	private int billingId;
 	private Date billDate;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+
 
 	@Column(name = "BILL_DATE")
 

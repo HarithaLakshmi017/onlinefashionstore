@@ -2,15 +2,18 @@ package com.chainsys.onlinefashionstore.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "product")
 public class Product {
 
-//	@Id
-//	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String productName;
 	private double rate;
 	private Category categoryNo;
@@ -41,6 +44,7 @@ public class Product {
 		this.rate = rate;
 	}
 	@Column(name="CATEGORY_NO")
+	@JoinColumn(name = "CATEGORY_NO", referencedColumnName = "CATEGORY_NO")
 	public Category getCategoryNo() {
 		return categoryNo;
 	}
