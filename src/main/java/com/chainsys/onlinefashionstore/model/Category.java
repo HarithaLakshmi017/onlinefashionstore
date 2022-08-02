@@ -13,24 +13,24 @@ public class Category {
 
 	@Id
 	@Column(name = "CATEGORY_NO")
-	private int categoryno;
+	private int categoryNo;
 
-	public int getCategoryno() {
-		return categoryno;
+	public int getCategoryNo() {
+		return categoryNo;
 	}
 
-	public void setCategoryno(int categoryno) {
-		this.categoryno = categoryno;
+	public void setCategoryNo(int categoryNo) {
+		this.categoryNo = categoryNo;
 	}
     @Column(name= "CATEGORY_NAME")
-	private String categoryname;
+	private String categoryName;
 
 	public String getCategoryname() {
-		return categoryname;
+		return categoryName;
 	}
 
-	public void setCategoryname(String categoryname) {
-		this.categoryname = categoryname;
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
 	}
 
 }

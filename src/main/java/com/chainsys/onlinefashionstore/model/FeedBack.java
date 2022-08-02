@@ -14,51 +14,38 @@ import javax.persistence.Table;
 public class FeedBack {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-
-	private int email_id;
-	private String feed_back;
-	private String user_id;
-	private Date feedback_date;
-
-	public Date getFeedback_date() {
-		return feedback_date;
+	private String userId;
+	private Date feedbackDate;
+	private int emailId;
+	private String feedBack;
+	
+	@Column(name="feed_back")
+	public String getFeedBack() {
+		return feedBack;
 	}
-
-	public void setFeedback_date(Date feedback_date) {
-		this.feedback_date = feedback_date;
+	public void setFeedBack(String feedBack) {
+		this.feedBack = feedBack;
 	}
-
-	public int getBilling_id() {
-		return billing_id;
+	@Column(name="user_id")
+	public String getUserId() {
+		return userId;
 	}
-
-	public void setBilling_id(int billing_id) {
-		this.billing_id = billing_id;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
-
-	private int billing_id;
-
-	public int getemail_id() {
-		return email_id;
+	@Column(name="feedback_date")
+	public Date getFeedbackDate() {
+		return feedbackDate;
 	}
-
-	public void setemail_id(int email_id) {
-		this.email_id = email_id;
+	public void setFeedbackDate(Date feedbackDate) {
+		this.feedbackDate = feedbackDate;
 	}
-
-	public String getfeed_back() {
-		return feed_back;
+	@Column(name="email_id")
+	public int getEmailId() {
+		return emailId;
 	}
-
-	public void setfeed_back(String feed_back) {
-		this.feed_back = feed_back;
+	public void setEmailId(int emailId) {
+		this.emailId = emailId;
 	}
-
-	public String getuser_id() {
-		return user_id;
-	}
-
-	public void setuser_id(String user_id) {
-		this.user_id = feed_back;
-	}
+		
 }

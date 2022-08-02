@@ -1,67 +1,83 @@
 package com.chainsys.onlinefashionstore.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "USERS_DETAIL")
 public class Usersdetail {
-	private String USER_NAME;
-    private int PHONE_NUMBER;
-    private String EMAIL;
-    private String PASSWORD;
-    private String ADDRESS;
-    private String GENDER;
-    private String ROLE;
-    
-	private int USER_ID;
-    public int getUSER_ID() {
-		return USER_ID;
-	}
-	public void setUSER_ID(int uSER_ID) {
-		USER_ID = uSER_ID;
-	}
-	public String getUSER_NAME() {
-		return USER_NAME;
-	}
-	public void setUSER_NAME(String uSER_NAME) {
-		USER_NAME = uSER_NAME;
-	}
-	public int getPHONE_NUMBER() {
-		return PHONE_NUMBER;
-	}
-	public void setPHONE_NUMBER(int pHONE_NUMBER) {
-		PHONE_NUMBER = pHONE_NUMBER;
-	}
-	public String getEMAIL() {
-		return EMAIL;
-	}
-	public void setEMAIL(String eMAIL) {
-		EMAIL = eMAIL;
-	}
-	public String getPASSWORD() {
-		return PASSWORD;
-	}
-	public void setPASSWORD(String pASSWORD) {
-		PASSWORD = pASSWORD;
-	}
-	public String getADDRESS() {
-		return ADDRESS;
-	}
-	public void setADDRESS(String aDDRESS) {
-		ADDRESS = aDDRESS;
-	}
-	public String getGENDER() {
-		return GENDER;
-	}
-	public void setGENDER(String gENDER) {
-		GENDER = gENDER;
-	}
-	public String getROLE() {
-		return ROLE;
-	}
-	public void setROLE(String rOLE) {
-		ROLE = rOLE;
-	}
+	private int phoneNumber;
+	private String email;
+	private String password;
+	private String address;
+	private String gender;
+	private String role;
+	private int userId;
+	private String userName;
 	
+   @Column(name="USER_NAME")
+	public String getuserName() {
+		return userName;
+	}
+
+	public void setuserName(String userName) {
+		this.userName = userName;
+	}
+	@Column(name="USER_NAME")
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	@Column(name="PASSWORD")
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	@Column(name="ADDRESS")
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	@Column(name="GENDER")
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	@Column(name="ROLE")
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+	@Column(name="PHONE_NUMBER")
+	public int getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(int phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	@Column(name="USER_ID")
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 }
