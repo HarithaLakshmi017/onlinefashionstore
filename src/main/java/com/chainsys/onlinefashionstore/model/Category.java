@@ -15,21 +15,21 @@ public class Category {
 	@Column(name = "CATEGORY_NO")
 	private int categoryno;
 
-	public int getCategory_no() {
+	public int getCategoryno() {
 		return categoryno;
 	}
 
-	public void setCategory_no(int categoryno) {
+	public void setCategoryno(int categoryno) {
 		this.categoryno = categoryno;
 	}
     @Column(name= "CATEGORY_NAME")
 	private String categoryname;
 
-	public String getCategory_name() {
+	public String getCategoryname() {
 		return categoryname;
 	}
 
-	public void setCategory_name(String categoryname) {
+	public void setCategoryname(String categoryname) {
 		this.categoryname = categoryname;
 	}
 

@@ -30,7 +30,7 @@ public class Product {
 	public String getProductname() {
 		return productname;
 	}
-	public void setProduct_name(String productname) {
+	public void setProductname(String productname) {
 		this.productname = productname;
 	}
 	@Column(name="RATE")
@@ -48,7 +48,7 @@ public class Product {
 		this.productdescription = productdescription;
 	}
 	@Column(name="PRODUCT_IMAGE")
-	public String getProduct_image() {
+	public String getProductimage() {
 		return productimage;
 	}
 	public void setProductimage(String productimage) {
