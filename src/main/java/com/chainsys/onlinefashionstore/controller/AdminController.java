@@ -1,74 +1,71 @@
 package com.chainsys.onlinefashionstore.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import com.chainsys.onlinefashionstore.dto.ProductDTO;
 import com.chainsys.onlinefashionstore.model.Category;
 import com.chainsys.onlinefashionstore.model.Product;
 import com.chainsys.onlinefashionstore.service.CategoryService;
 import com.chainsys.onlinefashionstore.service.ProductService;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/admin")
 public class AdminController {
-	public static String uploadDir = System.getProperty("user.dir") + "/src/main/resources/static/productImages";
+//	public static String uploadDir = System.getProperty("user.dir") + "/src/main/resources/static/productImages";
 	@Autowired
 	CategoryService categoryService;
 	@Autowired
 	ProductService productService;
 
-	@GetMapping("/admin")
+	@GetMapping("/adminhome")
 	public String adminHome() {
 		return "admin";
 	}
 
-	@GetMapping("/admin/categorylist")
-	public String getAllDoctor(Model model) {
+	@RequestMapping("/categorylist")
+	public String getAllcategory(Model model) {
 		List<Category> categorylist = categoryService.getAllCategory();
 		model.addAttribute("allcategory", categorylist);
-		return "list-category";
+		return "category-list";
 	}
 
-	@GetMapping("/admin/categories")
-	public String category(Model model) {
+	@GetMapping("/addformcategories")
+	public String showAddForm(Model model) {
 		Category category = new Category();
-		model.addAttribute("addcategories", categoryService);
+		model.addAttribute("addcategories", category);
 		return "add-category-form";
 	}
 
-	@GetMapping("/add")
-	public String addNewcategory(@ModelAttribute("addcategory") Category category) {
+	@PostMapping("/addcat")
+	public String addNewcategory(@ModelAttribute("addcategories") Category category) {
 		categoryService.addCategory(category);
-		return "redirect:/admin/categories";
+		return "redirect:/admin/categorylist";
 	}
 
-	@GetMapping("/admin/categories/update")
-	public String showUpdateForm(@RequestParam("categoryNo") int no, Model model) {
-		Optional<Category> category = categoryService.findCategoryById(no);
+	@GetMapping("/updateCategoryform")
+	public String showUpdateForm(@RequestParam("categoryid") int no, Model model) {
+		Category category = categoryService.findCategoryById(no);
 		model.addAttribute("updateCategory", category);
-		return "update-doctor-form";
+		return "update-category-form";
 	}
 
-	@PostMapping("/admin/categories/update")
-	public String updateCategory(@ModelAttribute("updatecategory") Category category) {
-		categoryService.save(category);
-		return "redirect:/admin/categories";
+	@PostMapping("/update")
+	public String updateCategory(@ModelAttribute("updateCategory") Category category) {
+		categoryService.updateCategory(category);
+		return "redirect:/admin/categorylist";
 	}
 
-	@GetMapping("/admin/categories/delete/{id}")
-	public String deleteCategory(@PathVariable("id") int id) {
+	@GetMapping("/deleteCategory")
+	public String deleteCategory(@RequestParam("categoryid") int id) {
 		categoryService.deleteCategory(id);
-		return "redirect:/admin/categories";
+		return "redirect:/admin/categorylist";
 	}
 
 //	@GetMapping("/admin/categories/update/{id}")
@@ -91,19 +88,45 @@ public class AdminController {
 //		return "products";
 //	}
 
-	@GetMapping("/admin/products/")
-	public String products(Model model) {
-		List<Category> productlist = categoryService.getAllProducts();
+	@GetMapping("/productlist")
+	public String product(Model model) {
+		List<Product> productlist = productService.getAllProducts();
 		model.addAttribute("allproduct", productlist);
-		return "list-product";
+		return "product-list";
+		
 	}
 
-	@GetMapping("/admin/products/add")
+	@GetMapping("/addproductform")
 	public String addProducts(Model model) {
-		model.addAttribute("productDTO", new ProductDTO());
-		model.addAttribute("categories", categoryService.getAllCategory());
-		return "addproduct";
+		Product p = new Product();
+		model.addAttribute("addproduct", p);
+		return "add-product-form";
 	}
+	
+	@PostMapping("/add")
+	public String addproduct(@ModelAttribute("addproductform") Product p)  {
+		productService.save(p);
+		return "redirect:/admin/productlist";
+	}
+	
+	@GetMapping("/updateProductform")
+	public String showUpdate(@RequestParam("id") long id, Model model) {
+		Product pro = productService.findByCategoryId(id);
+		model.addAttribute("updateproduct", pro);
+		return "update-product-form";
+	}
+
+	@PostMapping("/updateProduct")
+	public String updateProduct(@ModelAttribute("updateproduct") Product pro) {
+		productService.save(pro);
+		return "redirect:/admin/productlist";
+	}
+
+//	@PostMapping("/newproduct")
+//	 public String addNewProduct(@ModelAttribute("addproduct") Product p) {
+//	 productService.save(p);
+//	 return "redirect:/product/productlist";
+//	    }
 
 //To upload img in database
 //	@PostMapping("/admin/products/add")
@@ -131,25 +154,27 @@ public class AdminController {
 //		return "redirect:/admin/products";
 //	}
 
-	@GetMapping("/admin/product/delete/{id}")
-	public String deleteProduct(@PathVariable("id") long id) {
+	@GetMapping("/deleteproduct")
+	public String deleteProduct(@RequestParam("id") int id) {
 		productService.removeProductById(id);
-		return "redirect:/admin/products";
-	}
-
-	@GetMapping("/admin/product/update/{id}")
-	public String updateProduct(@PathVariable("id") long id, Model model) {
-		Product product = productService.getProductsById(id);
-		ProductDTO productDTO = new ProductDTO();
-		productDTO.setProductid(product.getProductId());
-		productDTO.setCategoryno(product.getCategoryNo());
-		productDTO.setProductname(product.getProductName());
-		productDTO.setProductdescription(product.getProductDescription());
-		productDTO.setProductimage(product.getProductImage());
-
-		model.addAttribute("categories", categoryService.getAllCategory());
-		model.addAttribute("productDTO", productDTO);
-
-		return "addproduct";
+		return "redirect:/admin/productlist";
 	}
 }
+
+
+//	@GetMapping("/admin/product/update/{id}")
+//	public String updateProduct(@PathVariable("id") long id, Model model) {
+//		Product product = productService.getProductsById(id);
+//		ProductDTO productDTO = new ProductDTO();
+//		productDTO.setProductid(product.getProductId());
+//		productDTO.setCategoryno(product.getCategoryNo());
+//		productDTO.setProductname(product.getProductName());
+//		productDTO.setProductdescription(product.getProductDescription());
+//		productDTO.setProductimage(product.getProductImage());
+//
+//		model.addAttribute("categories", categoryService.getAllCategory());
+//		model.addAttribute("productDTO", productDTO);
+//
+//		return "addproduct";
+//	}
+//}

@@ -13,10 +13,11 @@
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addproduct">
 				<div>
-					<label for="productId">Product id</label>
+					<label for="productId">Product Id</label>
 					<div>
 						<form:input path="productId" />
 					</div>
+
 				</div>
 				<div>
 					<label for="productName">Product Name</label>
@@ -53,15 +54,10 @@
 					<div>
 						<form:input path="productImage" />
 					</div>
+					<div></div>
 					<div>
-					<label for="productId">Product Id</label>
-					<div>
-						<form:input path="productId" />
+						<form:button>Add New</form:button>
 					</div>
-				</div>
-				<div>
-					<form:button>Add New</form:button>
-				</div>
 			</form:form>
 		</div>
 	</div>

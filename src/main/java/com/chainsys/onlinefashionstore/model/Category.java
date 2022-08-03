@@ -2,10 +2,7 @@ package com.chainsys.onlinefashionstore.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -15,6 +12,8 @@ public class Category {
 	@Id
 	@Column(name = "CATEGORY_NO")
 	private int categoryNo;
+	@Column(name = "CATEGORY_NAME")
+	private String categoryName;
 
 	public int getCategoryNo() {
 		return categoryNo;
@@ -23,10 +22,8 @@ public class Category {
 	public void setCategoryNo(int categoryNo) {
 		this.categoryNo = categoryNo;
 	}
-    @Column(name= "CATEGORY_NAME")
-	private String categoryName;
 
-	public String getCategoryname() {
+	public String getCategoryName() {
 		return categoryName;
 	}
 

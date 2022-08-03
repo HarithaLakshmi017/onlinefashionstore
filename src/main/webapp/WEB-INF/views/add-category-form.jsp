@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,25 +8,31 @@
 <title>Add Category name</title>
 </head>
 <body>
-	<div id="root">
-		<div id="form">
-			<form:form action="add" method="post" modelAttribute="addcategory">
+	<h1 align="center">Add Category</h1>
+	<div id="table root">
+		<table border="2" align="center">
+			<div id="root"></div>
+		</table>
+		<div id="form" align="center">
+		
+			<form:form action="addcat" method="post"
+				modelAttribute="addcategories">
 				<div>
 					<label for="categoryNo">Category No</label>
-					<div>
-						<form:input path="categoryNo" />
-					</div>
+				</div>
+				<div>
+					<form:input path="categoryNo" />
 				</div>
 				<div>
 					<label for="categoryName">Category Name</label>
-					<div>
-						<form:input path="categoryName" />
-					</div>
 				</div>
+				<div>
+					<form:input path="categoryName" />
+				</div>
+
 				<form:button>Add New</form:button>
+			</form:form>
 		</div>
-		</form:form>
-	</div>
 	</div>
 </body>
 </html>

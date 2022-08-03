@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.chainsys.onlinefashionstore.model.Category;
 import com.chainsys.onlinefashionstore.model.Product;
 import com.chainsys.onlinefashionstore.repository.ProductRepository;
 
@@ -13,10 +14,6 @@ public class ProductService {
 	@Autowired
 	ProductRepository productRepository;
 	
-	public List<Product> findById(int id){
-	    return productRepository.findAllById(id);
-	}
-
 	public List<Product> getAllProducts() {
 		return productRepository.findAll();
 	}
@@ -24,16 +21,16 @@ public class ProductService {
 	public void addproduct(Product product) {
 		productRepository.save(product);
 	}
-
 	public void removeProductById(long id) {
 		productRepository.deleteById(id);
 	}
-
-	public Product getProductsById(long id) {
-		return productRepository.getById(id);
-	}
-
-	public List<Product> getAllProductByCategoryId(long id) {
-		return productRepository.findAllById(id);
+	public Product save(Product product) {
+        return productRepository.save(product);
+    }
+	public Product findByCategoryId(long id) {
+        return productRepository.findById(id);
+}
+	public Product updateProduct(Product product) {
+		return productRepository.save(product);
 	}
 }

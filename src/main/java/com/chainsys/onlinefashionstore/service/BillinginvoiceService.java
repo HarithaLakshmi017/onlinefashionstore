@@ -6,18 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.chainsys.onlinefashionstore.model.Category;
+import com.chainsys.onlinefashionstore.repository.BillinginvoiceRepository;
 import com.chainsys.onlinefashionstore.repository.CategoryRepository;
-import com.chainsys.onlinefashionstore.repository.FeedBackRepository;
 
 @Service
-public class FeedBackService {
+public class BillinginvoiceService {
 	@Autowired
-	private FeedBackRepository repo;
+	private BillinginvoiceRepository repo;
 
 	public List<Category> getAllCategory() {
 		List<Category> category = repo.findAll();
 		return category;
-		
-	}
 
 }

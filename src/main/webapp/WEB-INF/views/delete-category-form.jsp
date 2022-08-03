@@ -6,12 +6,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Update Category</title>
+<title>Delete Category</title>
 </head>
 <body>
 	<div id="root">
 		<div id="form">
-			<form:form action="update" method="post"
+			<form:form action="delete" method="post"
 				modelAttribute="updateCategory">
 				<div>
 					<label for="categoryNo">Category No</label>
@@ -25,7 +25,7 @@
 						<form:input path="categoryName" />
 					</div>
 					<div>
-						<form:button>Update</form:button>
+						<form:button>Delete</form:button>
 					</div>
 				</div>
 			</form:form>

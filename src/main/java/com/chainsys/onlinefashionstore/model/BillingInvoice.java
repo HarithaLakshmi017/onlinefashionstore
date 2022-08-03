@@ -15,18 +15,26 @@ import javax.persistence.Table;
 public class BillingInvoice {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "USER_ID")
 	private int userId;
-	private int productId;
+	@Column(name = "PRODUCT_ID")
+	private long productId;
+	@Column(name = "QUANTITY")
 	private int quantity;
+	@Column(name = "RATE")
 	private int rate;
+	@Column(name = "BILL_AMOUNT")
 	private float billAmount;
+	@Column(name = "MODE_OF_PAYMENT")
 	private String modeOfPayment;
+	@Column(name = "BILLING_ID")
 	private int billingId;
+	@Column(name = "BILL_DATE")
 	private Date billDate;
 
 
 
-	@Column(name = "BILL_DATE")
+	
 
 	public Date getBillDate() {
 		return billDate;
@@ -35,7 +43,7 @@ public class BillingInvoice {
 	public void setBillDate(Date billDate) {
 		this.billDate = billDate;
 	}
-	@Column(name = "USER_ID")
+	
 	public int getUserId() {
 		return userId;
 	}
@@ -43,15 +51,15 @@ public class BillingInvoice {
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	@Column(name = "PRODUCT_ID")
-	public int getProductId() {
+
+	public long getProductId() {
 		return productId;
 	}
 
-	public void setProductId(int productId) {
+	public void setProductId(long productId) {
 		this.productId = productId;
 	}
-	@Column(name = "QUANTITY")
+	
 	public int getQuantity() {
 		return quantity;
 	}
@@ -59,7 +67,7 @@ public class BillingInvoice {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	@Column(name = "RATE")
+	
 	public int getRate() {
 		return rate;
 	}
@@ -67,7 +75,7 @@ public class BillingInvoice {
 	public void setRate(int rate) {
 		this.rate = rate;
 	}
-	@Column(name = "BILL_AMOUNT")
+	
 	public float getBillAmount() {
 		return billAmount;
 	}
@@ -75,7 +83,7 @@ public class BillingInvoice {
 	public void setBillAmount(float billAmount) {
 		this.billAmount = billAmount;
 	}
-	@Column(name = "MODE_OF_PAYMENT")
+	
 	public String getModeOfPayment() {
 		return modeOfPayment;
 	}
@@ -83,7 +91,7 @@ public class BillingInvoice {
 	public void setModeOfPayment(String modeOfPayment) {
 		this.modeOfPayment = modeOfPayment;
 	}
-	@Column(name = "BILLING_ID")
+	
 	public int getBillingId() {
 		return billingId;
 	}

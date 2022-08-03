@@ -13,59 +13,65 @@ import javax.persistence.Table;
 public class Product {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String productName;
-	private double rate;
-	private Category categoryNo;
-	private int stockInhand;
-	private String productDescription;
-	private String productImage;
-	private long productId;
-	
+//	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="PRODUCT_ID")
+	private long productId;
+	@Column(name="PRODUCT_NAME")
+	private String productName;
+	@Column(name="RATE")
+	private double rate;
+	@Column(name="CATEGORY_NO")
+	private int categoryNo;
+	@Column(name="STOCK_IN_HAND")
+	private int stockInhand;
+	@Column(name="PRODUCT_DESCRIPTION")
+	private String productDescription;
+	@Column(name="PRODUCT_IMAGE")
+	private String productImage;
+	
+	
+
 	public long getProductId() {
 		return productId;
 	}
 	public void setProductId(long productId) {
 		this.productId = productId;
 	}
-	@Column(name="PRODUCT_NAME")
+
 	public String getProductName() {
 		return productName;
 	}
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-	@Column(name="RATE")
+	
 	public double getRate() {
 		return rate;
 	}
 	public void setRate(double rate) {
 		this.rate = rate;
 	}
-	@Column(name="CATEGORY_NO")
-	@JoinColumn(name = "CATEGORY_NO", referencedColumnName = "CATEGORY_NO")
-	public Category getCategoryNo() {
+		public int getCategoryNo() {
 		return categoryNo;
 	}
-	public void setCategoryNo(Category categoryNo) {
+	public void setCategoryNo(int categoryNo) {
 		this.categoryNo = categoryNo;
 	}
-	@Column(name="STOCK_IN_HAND")
+	
 	public int getStockInhand() {
 		return stockInhand;
 	}
 	public void setStockInhand(int stockInhand) {
 		this.stockInhand = stockInhand;
 	}
-	@Column(name="PRODUCT_DESCRIPTION")
+	
 	public String getProductDescription() {
 		return productDescription;
 	}
 	public void setProductDescription(String productDescription) {
 		this.productDescription = productDescription;
 	}
-	@Column(name="PRODUCT_IMAGE")
+
 	public String getProductImage() {
 		return productImage;
 	}

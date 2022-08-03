@@ -6,24 +6,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.chainsys.onlinefashionstore.model.Category;
+import com.chainsys.onlinefashionstore.model.Product;
+import com.chainsys.onlinefashionstore.model.Usersdetail;
 import com.chainsys.onlinefashionstore.repository.CategoryRepository;
+import com.chainsys.onlinefashionstore.repository.UsersdetailRepository;
 
 @Service
-public class CategoryService {
+public class UsersdetailService {
 	@Autowired
-	private CategoryRepository repo;
+	private UsersdetailRepository repo;
 
-	public List<Category> getAllCategory() {
-		List<Category> category = repo.findAll();
-		return category;
+	public List<Usersdetail> getAllUserdetails() {
+		List<Usersdetail> Usersdetail = repo.findAll();
+		return Usersdetail;
 		
 	}
 
-	public Category addCategory(Category category) {
-
-		return repo.save(category);
-	}
-
+	public Usersdetail save(Usersdetail user) {
+        return repo.save(user);
+    }
 	public Category findCategoryById(int id) {
 		return repo.findById(id);
 	}
@@ -35,4 +36,7 @@ public class CategoryService {
 	public void deleteCategory(int id) {
 		repo.deleteById(id);
 	}
+}
+
+
 }

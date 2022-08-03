@@ -8,17 +8,26 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "USERS_DETAIL")
 public class Usersdetail {
-	@Id
+	
+	@Column(name="PHONE_NUMBER")
 	private int phoneNumber;
+	@Column(name="EMAIL")
 	private String email;
+	@Column(name="PASSWORD")
 	private String password;
+	@Column(name="ADDRESS")
 	private String address;
+	@Column(name="GENDER")
 	private String gender;
+	@Column(name="ROLE")
 	private String role;
+	@Id
+	@Column(name="USER_ID")
 	private int userId;
+	@Column(name="USER_NAME")
 	private String userName;
 	
-   @Column(name="USER_NAME")
+  
 	public String getuserName() {
 		return userName;
 	}
@@ -26,7 +35,7 @@ public class Usersdetail {
 	public void setuserName(String userName) {
 		this.userName = userName;
 	}
-	@Column(name="USER_NAME")
+	
 	public String getEmail() {
 		return email;
 	}
@@ -34,7 +43,7 @@ public class Usersdetail {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	@Column(name="PASSWORD")
+	
 	public String getPassword() {
 		return password;
 	}
@@ -42,7 +51,7 @@ public class Usersdetail {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	@Column(name="ADDRESS")
+	
 	public String getAddress() {
 		return address;
 	}
@@ -50,7 +59,7 @@ public class Usersdetail {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	@Column(name="GENDER")
+	
 	public String getGender() {
 		return gender;
 	}
@@ -58,7 +67,7 @@ public class Usersdetail {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	@Column(name="ROLE")
+
 	public String getRole() {
 		return role;
 	}
@@ -66,7 +75,7 @@ public class Usersdetail {
 	public void setRole(String role) {
 		this.role = role;
 	}
-	@Column(name="PHONE_NUMBER")
+	
 	public int getPhoneNumber() {
 		return phoneNumber;
 	}
@@ -74,7 +83,7 @@ public class Usersdetail {
 	public void setPhoneNumber(int phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	@Column(name="USER_ID")
+	
 	public int getUserId() {
 		return userId;
 	}
