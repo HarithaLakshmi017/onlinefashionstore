@@ -15,6 +15,7 @@ import com.chainsys.onlinefashionstore.model.Product;
 import com.chainsys.onlinefashionstore.service.CategoryService;
 import com.chainsys.onlinefashionstore.service.ProductService;
 
+
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
@@ -110,8 +111,8 @@ public class AdminController {
 	}
 	
 	@GetMapping("/updateProductform")
-	public String showUpdate(@RequestParam("id") long id, Model model) {
-		Product pro = productService.findByCategoryId(id);
+	public String showUpdate(@RequestParam("id") int id, Model model) {
+		Product pro = new Product();
 		model.addAttribute("updateproduct", pro);
 		return "update-product-form";
 	}
@@ -159,8 +160,14 @@ public class AdminController {
 		productService.removeProductById(id);
 		return "redirect:/admin/productlist";
 	}
-}
 
+      @GetMapping("/findproductid")
+     public String findProductById(@RequestParam("id") int id,Model model) {
+     Product prod=productService.findproductbyId(id);
+	  model.addAttribute("findproductbyid", prod);
+	  return "find-product-id-form";
+      }
+      }
 
 //	@GetMapping("/admin/product/update/{id}")
 //	public String updateProduct(@PathVariable("id") long id, Model model) {

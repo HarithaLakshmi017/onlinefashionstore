@@ -11,10 +11,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "BILLING_INVOICE")
-
 public class BillingInvoice {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	
+	//@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "USER_ID")
 	private int userId;
 	@Column(name = "PRODUCT_ID")
@@ -27,15 +26,12 @@ public class BillingInvoice {
 	private float billAmount;
 	@Column(name = "MODE_OF_PAYMENT")
 	private String modeOfPayment;
+	@Id
 	@Column(name = "BILLING_ID")
 	private int billingId;
 	@Column(name = "BILL_DATE")
 	private Date billDate;
-
-
-
 	
-
 	public Date getBillDate() {
 		return billDate;
 	}

@@ -5,38 +5,32 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.chainsys.onlinefashionstore.model.Category;
-import com.chainsys.onlinefashionstore.model.Product;
+
 import com.chainsys.onlinefashionstore.model.Usersdetail;
-import com.chainsys.onlinefashionstore.repository.CategoryRepository;
 import com.chainsys.onlinefashionstore.repository.UsersdetailRepository;
 
 @Service
 public class UsersdetailService {
+	
 	@Autowired
 	private UsersdetailRepository repo;
 
 	public List<Usersdetail> getAllUserdetails() {
-		List<Usersdetail> Usersdetail = repo.findAll();
-		return Usersdetail;
+		return repo.findAll();
 		
 	}
 
-	public Usersdetail save(Usersdetail user) {
-        return repo.save(user);
+	public Usersdetail saveAll(Usersdetail theuser) {
+        return repo.save(theuser);
     }
-	public Category findCategoryById(int id) {
+	public Usersdetail findUsersdetailById(int id) {
 		return repo.findById(id);
 	}
 
-	public Category updateCategory(Category category) {
-		return repo.save(category);
-	}
-
-	public void deleteCategory(int id) {
+	public void deleteById(int id) {
 		repo.deleteById(id);
 	}
 }
 
 
-}
+

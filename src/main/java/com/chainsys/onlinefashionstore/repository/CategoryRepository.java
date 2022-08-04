@@ -9,7 +9,7 @@ import com.chainsys.onlinefashionstore.model.Category;
 
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Integer>{
-	//List<Category> findAllById();
+
 	Category save(Category category);
 	Category findById(int id);
 	// use for adding a new doctor

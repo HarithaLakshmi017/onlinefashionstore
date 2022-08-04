@@ -6,15 +6,15 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.chainsys.onlinefashionstore.model.Product;
+import com.chainsys.onlinefashionstore.model.Usersdetail;
 @Repository
-public interface ProductRepository extends JpaRepository<Product,Long>{
+public interface ProductRepository extends JpaRepository<Product,Integer>{
 	//List<Product> findAllById();
 	Product save(Product product);
-	Product findById(long id);
+	Product findById(int id);
 	// use for adding a new doctor
-	void deleteById(long productId);
+	void deleteById(int productId);
 	List<Product> findAll();
-//	List<Product> findAllById(long id);
 
 }
 

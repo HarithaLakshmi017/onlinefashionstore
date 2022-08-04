@@ -1,5 +1,19 @@
 package com.chainsys.onlinefashionstore.repository;
 
+import java.util.List;
 
-public interface FeedBackRepository {
-}
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.chainsys.onlinefashionstore.model.FeedBack;
+
+@Repository
+	public interface FeedBackRepository extends JpaRepository<FeedBack,Long>{
+		//List<Product> findAllById();
+		FeedBack save(FeedBack fb);
+		FeedBack findById(long id);
+		FeedBack deleteById(long feedbackId);
+		List<FeedBack> findAll();
+//		List<Product> findAllById(long id);
+
+	}

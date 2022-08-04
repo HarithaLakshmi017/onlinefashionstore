@@ -5,16 +5,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Category name</title>
+<title>Add Category Name</title>
 </head>
 <body>
-	<h1 align="center">Add Category</h1>
+	<h1 align="center">Add Category Name</h1>
 	<div id="table root">
 		<table border="2" align="center">
 			<div id="root"></div>
 		</table>
 		<div id="form" align="center">
-		
+
 			<form:form action="addcat" method="post"
 				modelAttribute="addcategories">
 				<div>

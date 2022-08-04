@@ -5,17 +5,30 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.chainsys.onlinefashionstore.model.Category;
+import com.chainsys.onlinefashionstore.model.BillingInvoice;
 import com.chainsys.onlinefashionstore.repository.BillinginvoiceRepository;
-import com.chainsys.onlinefashionstore.repository.CategoryRepository;
 
 @Service
 public class BillinginvoiceService {
-	@Autowired
-	private BillinginvoiceRepository repo;
-
-	public List<Category> getAllCategory() {
-		List<Category> category = repo.findAll();
-		return category;
+		@Autowired
+		private  BillinginvoiceRepository billinvoiceRepo;
+		
+		public  BillingInvoice findById(int id) {
+			return billinvoiceRepo.findById(id);
+		}
+		
+		public  BillingInvoice deleteById(int billid) {
+			return billinvoiceRepo.deleteById(billid);
+		}
+		
+		public BillingInvoice save(BillingInvoice bill) {
+			return billinvoiceRepo.save(bill);
+		}
+		
+		public  List<BillingInvoice> findAll() {
+			return billinvoiceRepo.findAll();
+		}
+	
 
 }
+

@@ -1,8 +1,12 @@
 package com.chainsys.onlinefashionstore.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -10,7 +14,7 @@ import javax.persistence.Table;
 public class Usersdetail {
 	
 	@Column(name="PHONE_NUMBER")
-	private int phoneNumber;
+	private long phoneNumber;
 	@Column(name="EMAIL")
 	private String email;
 	@Column(name="PASSWORD")
@@ -26,6 +30,9 @@ public class Usersdetail {
 	private int userId;
 	@Column(name="USER_NAME")
 	private String userName;
+	
+	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    private List<Product> products;
 	
   
 	public String getuserName() {
@@ -76,11 +83,11 @@ public class Usersdetail {
 		this.role = role;
 	}
 	
-	public int getPhoneNumber() {
+	public long getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(long phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 	

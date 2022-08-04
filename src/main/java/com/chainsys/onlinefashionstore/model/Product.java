@@ -2,18 +2,22 @@ package com.chainsys.onlinefashionstore.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "product")
 public class Product {
 
-	@Id
+	
 //	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Id
 	@Column(name="PRODUCT_ID")
 	private long productId;
 	@Column(name="PRODUCT_NAME")
@@ -28,6 +32,10 @@ public class Product {
 	private String productDescription;
 	@Column(name="PRODUCT_IMAGE")
 	private String productImage;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "User_id", nullable = false, insertable = false, updatable = false)
+   
 	
 	
 
@@ -78,6 +86,6 @@ public class Product {
 	public void setProductImage(String productImage) {
 		this.productImage = productImage;
 	}
-	
+	 private Usersdetail user;
 }
 	
