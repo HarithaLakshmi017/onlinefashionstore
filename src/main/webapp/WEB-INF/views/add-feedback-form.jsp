@@ -24,10 +24,10 @@
 					<form:input path="userId" />
 				</div>
 				<div>
-					<label for="emailId">Email Id</label>
+					<label for="feedbackId">Feedback Id</label>
 				</div>
 				<div>
-					<form:input path="emailId" />
+					<form:input path="feedbackId" />
 				</div>
 				<div>
 					<label for="feedback">FeedBack</label>

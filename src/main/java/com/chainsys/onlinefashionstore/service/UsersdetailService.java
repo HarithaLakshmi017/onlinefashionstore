@@ -5,30 +5,41 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
+import com.chainsys.onlinefashionstore.dto.UserBillingDTO;
+import com.chainsys.onlinefashionstore.model.BillingInvoice;
 import com.chainsys.onlinefashionstore.model.Usersdetail;
+import com.chainsys.onlinefashionstore.repository.BillinginvoiceRepository;
 import com.chainsys.onlinefashionstore.repository.UsersdetailRepository;
 
 @Service
 public class UsersdetailService {
 	
 	@Autowired
-	private UsersdetailRepository repo;
-
+	UsersdetailRepository userRepository;
+	@Autowired
+	BillinginvoiceRepository billinginvoiceRepository;
 	public List<Usersdetail> getAllUserdetails() {
-		return repo.findAll();
+		return userRepository.findAll();
 		
 	}
 
 	public Usersdetail saveAll(Usersdetail theuser) {
-        return repo.save(theuser);
+        return userRepository.save(theuser);
     }
 	public Usersdetail findUsersdetailById(int id) {
-		return repo.findById(id);
+		return userRepository.findById(id);
 	}
 
 	public void deleteById(int id) {
-		repo.deleteById(id);
+		userRepository.deleteById(id);
+	}
+	
+	public UserBillingDTO  getUserBillingDTO(int id) {
+		UserBillingDTO dto = new UserBillingDTO();
+		BillingInvoice bill = new BillingInvoice();
+	  dto.setUserId(userRepository.findById(id));
+		dto.setBillingInvoices(billinginvoiceRepository.findAll());
+		return dto;
 	}
 }
 

@@ -11,8 +11,8 @@ import javax.persistence.Table;
 @Table(name = "feedback")
 
 public class FeedBack {
-	@Column(name = "email_id")
-	private String emailId;
+	@Column(name = "feedback_id")
+	private String feedbackId;
 	@Column(name = "feed_back")
 	private String feedback;
 	@Column(name = "feedback_date")
@@ -28,14 +28,14 @@ public class FeedBack {
 	public void setUserId(long userId) {
 		this.userId = userId;
 	}
-
-	public String getEmailId() {
-		return emailId;
+	public String getFeedbackId() {
+		return feedbackId;
 	}
 
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+	public void setFeedbackId(String feedbackId) {
+		this.feedbackId = feedbackId;
 	}
+	
 
 	public String getFeedback() {
 		return feedback;

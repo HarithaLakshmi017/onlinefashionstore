@@ -14,7 +14,7 @@
 		<thead>
 		<tr>
 
-			<th>Email</th>
+			<th>FeedBack Id</th>
 			<th>User Id</th>
 			<th>FeedBack</th>
 			<th>FeedBack Date</th>
@@ -28,7 +28,7 @@
 			<c:forEach var="feedbacklist" items="${allfeedbacklist}">
                     <tr>
 
-					<td>${feedbacklist.emailId}</td>
+					<td>${feedbacklist.feedbackId}</td>
 					<td>${feedbacklist.userId}</td>
 					<td>${feedbacklist.feedback}</td>
 					<td>${feedbacklist.feedbackDate}</td>

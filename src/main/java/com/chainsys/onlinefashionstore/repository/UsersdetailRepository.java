@@ -13,7 +13,7 @@ public interface UsersdetailRepository extends JpaRepository<Usersdetail, Intege
 	
 	Usersdetail findById(int id);
 
-	Usersdetail save(Usersdetail u);
+	Usersdetail save(Usersdetail usersdetail);
 
 	// use for adding a new user
 	void deleteById(int userId);

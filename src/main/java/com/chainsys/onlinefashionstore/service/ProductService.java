@@ -5,8 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.chainsys.onlinefashionstore.dto.UserProductDTO;
-import com.chainsys.onlinefashionstore.model.Category;
 import com.chainsys.onlinefashionstore.model.Product;
 import com.chainsys.onlinefashionstore.repository.ProductRepository;
 import com.chainsys.onlinefashionstore.repository.UsersdetailRepository;
@@ -38,10 +36,11 @@ public class ProductService {
 	public Product updateProduct(Product product) {
 		return productRepository.save(product);
 	}
-	
-	public UserProductDTO getPersonProductDTO(int id) {
-		UserProductDTO dto = new UserProductDTO();
-	    dto.setUser(productRepository.getById(id);
-	    dto.setProducts(repository.findAll());
-		}
+
+//	public UserProductDTO getPersonProductDTO(int id) {
+//		UserProductDTO dto = new UserProductDTO();
+//	    dto.setUser(productRepository.getById(id)
+//	    dto.setProducts(repository.findAll());
+//		}
 }
+

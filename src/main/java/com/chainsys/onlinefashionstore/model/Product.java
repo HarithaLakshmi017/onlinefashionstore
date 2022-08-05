@@ -32,60 +32,49 @@ public class Product {
 	private String productDescription;
 	@Column(name="PRODUCT_IMAGE")
 	private String productImage;
-	
-	@ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "User_id", nullable = false, insertable = false, updatable = false)
-   
-	
-	
-
 	public long getProductId() {
 		return productId;
 	}
 	public void setProductId(long productId) {
 		this.productId = productId;
 	}
-
 	public String getProductName() {
 		return productName;
 	}
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-	
 	public double getRate() {
 		return rate;
 	}
 	public void setRate(double rate) {
 		this.rate = rate;
 	}
-		public int getCategoryNo() {
+	public int getCategoryNo() {
 		return categoryNo;
 	}
 	public void setCategoryNo(int categoryNo) {
 		this.categoryNo = categoryNo;
 	}
-	
 	public int getStockInhand() {
 		return stockInhand;
 	}
 	public void setStockInhand(int stockInhand) {
 		this.stockInhand = stockInhand;
 	}
-	
 	public String getProductDescription() {
 		return productDescription;
 	}
 	public void setProductDescription(String productDescription) {
 		this.productDescription = productDescription;
 	}
-
 	public String getProductImage() {
 		return productImage;
 	}
 	public void setProductImage(String productImage) {
 		this.productImage = productImage;
 	}
-	 private Usersdetail user;
+	
+	
 }
 	

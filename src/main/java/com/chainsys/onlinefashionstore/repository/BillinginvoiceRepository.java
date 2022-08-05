@@ -1,5 +1,6 @@
 package com.chainsys.onlinefashionstore.repository;
 
+
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,11 +11,11 @@ public interface BillinginvoiceRepository extends JpaRepository<BillingInvoice, 
 
 	BillingInvoice findById(int id);
 
-	BillingInvoice save(BillingInvoice bill);
+	BillingInvoice save(BillingInvoice id);
 
-	BillingInvoice deleteById(int billid);
+	BillingInvoice deleteById(int id);
 
-		List<BillingInvoice> findAll();
+//		List<BillingInvoice> findById();
 	}
 
 
