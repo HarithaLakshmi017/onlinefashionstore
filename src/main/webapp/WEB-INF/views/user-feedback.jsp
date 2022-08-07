@@ -7,92 +7,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add User name</title>
-<style type="text/css">
-body {
-
-h1 {
-	backgroundcolor: #FFE4C4;
-}
-label {
-	backgroundcolor: #FFE4C4;
-	font-size: 1.3em;
-	display: flex;
-	margin: 5px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
-}
-#userId {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#phoneNumber {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#email {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#phoneNo {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#email {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#password {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#address {
-	width: 280px;
-	height: 40px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-	}
-	#gender {
-	width: 280px;
-	height: 40px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-	}
-#log {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 14px;
-	padding-left: 10px;
-	color: blue;
-}
-
-</style>
 </head>
 <body>
 	<div id="root">
 		<div id="form">
-			<form:form action="adduser" method="post" modelAttribute="addusers">
+			<form:form action="" method="post" modelAttribute="userdetail">
 				<div>
 					<label for="userId">User Id</label>
 					<div>
@@ -143,11 +62,40 @@ label {
 						<form:input path="role" />
 					</div>
 				</div>
+<div id="table root">
+	       
+	<table>
+		<thead>
+		<tr>
 
+			<th>User Id</th>
+			<th>Product Id</th>
+			<th>Quantity</th>
+			<th>Rate</th>
+			<th>Bill Amount</th>
+			<th>Mode Of Payment</th>
+			<th>Billing Id</th>
+			<th>Bill Date</th>
+		</tr>
 
-				<div>
-					<form:button>Add User</form:button>
-				</div>
+		</thead>
+
+		<tbody>
+
+			<c:forEach var="listfeedback" items="${getfeedback}">
+                    <tr>
+
+					<td>${listfeedback.userId}</td>
+					<td>${listfeedback.feedback}</td>
+					<td>${listfeedback.feedbackDate}</td>
+					<td>${listfeedback.feedbackId}</td>
+			
+				</tr>
+                </c:forEach>
+		</tbody>
+	</table>
+	   
+</div>
 
 			</form:form>
 

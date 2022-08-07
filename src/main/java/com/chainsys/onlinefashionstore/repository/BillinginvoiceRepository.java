@@ -11,7 +11,7 @@ public interface BillinginvoiceRepository extends JpaRepository<BillingInvoice, 
 
 	BillingInvoice findById(int id);
 
-	BillingInvoice save(BillingInvoice id);
+	BillingInvoice save(int id);
 
 	BillingInvoice deleteById(int id);
 

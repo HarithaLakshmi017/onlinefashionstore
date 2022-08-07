@@ -5,6 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.chainsys.onlinefashionstore.dto.ProductBillingDTO;
+import com.chainsys.onlinefashionstore.dto.UserBillingDTO;
+import com.chainsys.onlinefashionstore.model.BillingInvoice;
 import com.chainsys.onlinefashionstore.model.Product;
 import com.chainsys.onlinefashionstore.repository.ProductRepository;
 import com.chainsys.onlinefashionstore.repository.UsersdetailRepository;
@@ -12,11 +15,12 @@ import com.chainsys.onlinefashionstore.repository.UsersdetailRepository;
 @Service
 public class ProductService {
 	@Autowired
-	
+
 	ProductRepository productRepository;
-	
+
 	@Autowired
-	UsersdetailRepository repository;
+	UsersdetailRepository userrepository;
+
 	public List<Product> getAllProducts() {
 		return productRepository.findAll();
 	}
@@ -24,15 +28,19 @@ public class ProductService {
 	public void addproduct(Product product) {
 		productRepository.save(product);
 	}
+
 	public void removeProductById(int id) {
 		productRepository.deleteById(id);
 	}
+
 	public Product save(Product product) {
-        return productRepository.save(product);
-    }
+		return productRepository.save(product);
+	}
+
 	public Product findproductbyId(int id) {
-        return productRepository.findById(id);
-}
+		return productRepository.findById(id);
+	}
+
 	public Product updateProduct(Product product) {
 		return productRepository.save(product);
 	}
@@ -42,5 +50,12 @@ public class ProductService {
 //	    dto.setUser(productRepository.getById(id)
 //	    dto.setProducts(repository.findAll());
 //		}
-}
 
+	public ProductBillingDTO getProductBillingDTO(int id) {
+		ProductBillingDTO dto = new ProductBillingDTO();
+		BillingInvoice bill = new BillingInvoice();
+		dto.setProductId(productRepository.findById(id));
+		dto.setBillingInvoices(userrepository.findAll());
+		return dto;
+	}
+}

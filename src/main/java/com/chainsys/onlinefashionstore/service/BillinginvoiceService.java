@@ -28,7 +28,12 @@ public class BillinginvoiceService {
 		public  List<BillingInvoice> findAll() {
 			return billinvoiceRepo.findAll();
 		}
-	
+
+//		public List<BillingInvoice> getUserBillingDTO() {
+//		
+//			return billinvoiceRepo.findAll();
+//		}
+//	
 
 }
 

@@ -10,11 +10,15 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.chainsys.onlinefashionstore.dto.CategoryProductDTO;
+import com.chainsys.onlinefashionstore.dto.ProductBillingDTO;
+import com.chainsys.onlinefashionstore.dto.UserBillingDTO;
 import com.chainsys.onlinefashionstore.model.Category;
 import com.chainsys.onlinefashionstore.model.Product;
+import com.chainsys.onlinefashionstore.service.BillinginvoiceService;
 import com.chainsys.onlinefashionstore.service.CategoryService;
 import com.chainsys.onlinefashionstore.service.ProductService;
-
 
 @Controller
 @RequestMapping("/admin")
@@ -24,6 +28,8 @@ public class AdminController {
 	CategoryService categoryService;
 	@Autowired
 	ProductService productService;
+	@Autowired
+	BillinginvoiceService billService;
 
 	@GetMapping("/adminhome")
 	public String adminHome() {
@@ -69,6 +75,14 @@ public class AdminController {
 		return "redirect:/admin/categorylist";
 	}
 
+	@GetMapping("/getCategoryproduct")
+	public String getCategoryProduct(@RequestParam("id") int id, Model model) {
+		CategoryProductDTO dto = new CategoryProductDTO();
+		model.addAttribute("cate", categoryService.getCategoryProductDTO(id));
+		model.addAttribute("getproduct", productService.getAllProducts());
+		return "category-product";
+	}
+
 //	@GetMapping("/admin/categories/update/{id}")
 //	public String updateCategoryById(@PathVariable int id, Model model) {
 //		Optional<Category> category = CategoryService.updateCategoryById(id);
@@ -94,7 +108,7 @@ public class AdminController {
 		List<Product> productlist = productService.getAllProducts();
 		model.addAttribute("allproduct", productlist);
 		return "product-list";
-		
+
 	}
 
 	@GetMapping("/addproductform")
@@ -103,13 +117,13 @@ public class AdminController {
 		model.addAttribute("addproduct", p);
 		return "add-product-form";
 	}
-	
+
 	@PostMapping("/add")
-	public String addproduct(@ModelAttribute("addproductform") Product p)  {
+	public String addproduct(@ModelAttribute("addproductform") Product p) {
 		productService.save(p);
 		return "redirect:/admin/productlist";
 	}
-	
+
 	@GetMapping("/updateProductform")
 	public String showUpdate(@RequestParam("id") int id, Model model) {
 		Product pro = new Product();
@@ -161,13 +175,22 @@ public class AdminController {
 		return "redirect:/admin/productlist";
 	}
 
-      @GetMapping("/findproductid")
-     public String findProductById(@RequestParam("id") int id,Model model) {
-     Product prod=productService.findproductbyId(id);
-	  model.addAttribute("findproductbyid", prod);
-	  return "find-product-id-form";
-      }
-      }
+	@GetMapping("/findproductid")
+	public String findProductById(@RequestParam("id") int id, Model model) {
+		Product prod = productService.findproductbyId(id);
+		model.addAttribute("findproductbyid", prod);
+		return "find-product-id-form";
+	}
+
+
+@GetMapping("/getproductbill")
+public String getProductBilling(@RequestParam("id") int id, Model model) {
+	ProductBillingDTO dto = new ProductBillingDTO();
+	model.addAttribute("products", productService.getProductBillingDTO(id));
+	model.addAttribute("getbill", productService.getAllbilldetails());
+	return "product-billing";
+}
+}
 
 //	@GetMapping("/admin/product/update/{id}")
 //	public String updateProduct(@PathVariable("id") long id, Model model) {

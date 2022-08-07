@@ -8,12 +8,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.onlinefashionstore.dto.UserBillingDTO;
+import com.chainsys.onlinefashionstore.dto.UserFeedbackDTO;
 import com.chainsys.onlinefashionstore.model.Usersdetail;
+import com.chainsys.onlinefashionstore.service.BillinginvoiceService;
 import com.chainsys.onlinefashionstore.service.UsersdetailService;
 
 @Controller
@@ -21,6 +22,7 @@ import com.chainsys.onlinefashionstore.service.UsersdetailService;
 public class UsersdetailController {
 	@Autowired
 	UsersdetailService usersdetailservice;
+	
 
 	@GetMapping("/userlist")
 	public String getUserAll(Model model) {
@@ -37,7 +39,7 @@ public class UsersdetailController {
 	}
 
 	@PostMapping("/adduser")
-	public String addNewUser(@ModelAttribute("adduser") Usersdetail theuser) {
+	public String addNewUser(@ModelAttribute("addusers") Usersdetail theuser) {
 		usersdetailservice.saveAll(theuser);
 		return "redirect:/user/userlist";
 	}
@@ -86,5 +88,13 @@ public class UsersdetailController {
 		model.addAttribute("userd", usersdetailservice.getUserBillingDTO(id));
 		model.addAttribute("getbilllist", usersdetailservice.getAllUserdetails());
 		return "user-billing";
+	}
+
+	@GetMapping("/getuserfeedback")
+	public String getUserFeedback(@RequestParam("id") int id, Model model) {
+		UserFeedbackDTO dto = new UserFeedbackDTO();
+		model.addAttribute("userdetail", usersdetailservice.getUserFeedbackDTO(id));
+		model.addAttribute(usersdetailservice.getAllUserdetails());
+		return "user-feedback";
 	}
 }

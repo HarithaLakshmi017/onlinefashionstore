@@ -5,34 +5,46 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.chainsys.onlinefashionstore.dto.CategoryProductDTO;
 import com.chainsys.onlinefashionstore.model.Category;
 import com.chainsys.onlinefashionstore.repository.CategoryRepository;
+import com.chainsys.onlinefashionstore.repository.ProductRepository;
 
 @Service
 public class CategoryService {
 	@Autowired
-	private CategoryRepository repo;
+	private CategoryRepository catrepo;
+	@Autowired
+	private ProductRepository productrepo;
 
 	public List<Category> getAllCategory() {
-		List<Category> category = repo.findAll();
+		List<Category> category = catrepo.findAll();
 		return category;
 		
 	}
 
 	public Category addCategory(Category category) {
 
-		return repo.save(category);
+		return catrepo.save(category);
 	}
 
 	public Category findCategoryById(int id) {
-		return repo.findById(id);
+		return catrepo.findById(id);
 	}
 
 	public Category updateCategory(Category category) {
-		return repo.save(category);
+		return catrepo.save(category);
 	}
 
 	public void deleteCategory(int id) {
-		repo.deleteById(id);
+		catrepo.deleteById(id);
 	}
+
+ public CategoryProductDTO getCategoryProductDTO(int id) {
+	 CategoryProductDTO dto = new CategoryProductDTO();
+	 Category cat = new Category();
+	 dto.setCategory(catrepo.findById(id));
+	 dto.setProduct(productrepo.findAll());
+	 return dto;
+ }
 }
