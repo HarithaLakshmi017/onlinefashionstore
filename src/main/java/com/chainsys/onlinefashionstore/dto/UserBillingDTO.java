@@ -7,7 +7,7 @@ import com.chainsys.onlinefashionstore.model.BillingInvoice;
 import com.chainsys.onlinefashionstore.model.Usersdetail;
 
 public class UserBillingDTO {
-	List<BillingInvoice> billingInvoices = new ArrayList<>();
+	 private List<BillingInvoice> billingInvoices = new ArrayList<>();
 	private Usersdetail usersdetail;
 	public List<BillingInvoice> getBillingInvoices() {
 		return billingInvoices;
@@ -15,14 +15,13 @@ public class UserBillingDTO {
 	public void setBillingInvoices(List<BillingInvoice> billingInvoices) {
 		this.billingInvoices = billingInvoices;
 	}
-
-	public Usersdetail getUserId() {
+	public Usersdetail getUsersdetail() {
 		return usersdetail;
 	}
-	public void setUserId(Usersdetail usersdetail) {
+	public void setUsersdetail(Usersdetail usersdetail) {
 		this.usersdetail = usersdetail;
 	}
-	  
-	  
-	   
+	
+	
+		   
 }

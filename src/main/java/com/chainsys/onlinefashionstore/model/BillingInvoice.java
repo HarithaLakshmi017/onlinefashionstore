@@ -9,34 +9,51 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.Fetch;
 
 @Entity
 @Table(name = "BILLING_INVOICE")
 public class BillingInvoice {
-	@Id
+
+	@NotEmpty
+	@Size(min = 2, max = 5, message = "Please enter Integer only")
 	@Column(name = "BILLING_ID")
 	private int billingId;
-//	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@NotEmpty
+	@Size(min = 2, max = 5, message = "Please enter Integer only")
 	@Column(name = "USER_ID")
 	private int userId;
+	@NotEmpty
+	@Size(min = 2, max = 5, message = "Please enter Integer only")
 	@Column(name = "PRODUCT_ID")
 	private long productId;
+	@NotEmpty
+	@Size(min = 20, max = 30, message = "Please select specified quantity only")
 	@Column(name = "QUANTITY")
 	private int quantity;
+	@NotEmpty
+	@Size(min = 2, max = 5, message = "Please enter Integer only")
 	@Column(name = "RATE")
 	private int rate;
+	@NotEmpty
+	@Size(min = 8, max = 10, message = "Please enter Integer only")
 	@Column(name = "BILL_AMOUNT")
 	private float billAmount;
+	
 	@Column(name = "MODE_OF_PAYMENT")
 	private String modeOfPayment;
 	@Column(name = "BILL_DATE")
-	private Date billDate;	
+	private Date billDate;
 	@ManyToOne
-	@JoinColumn(name ="USER_ID", nullable = false,updatable = false,insertable = false)
-    private Usersdetail usersdetail;
+	@JoinColumn(name = "USER_ID", nullable = false, updatable = false, insertable = false)
+	private Usersdetail usersdetail;
 	public int getBillingId() {
 		return billingId;
 	}
@@ -91,7 +108,5 @@ public class BillingInvoice {
 	public void setUsersdetail(Usersdetail usersdetail) {
 		this.usersdetail = usersdetail;
 	}
-
-
 	
 }

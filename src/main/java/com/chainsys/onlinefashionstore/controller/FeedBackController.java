@@ -12,12 +12,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.onlinefashionstore.model.FeedBack;
+import com.chainsys.onlinefashionstore.model.Usersdetail;
 import com.chainsys.onlinefashionstore.service.FeedBackService;
+
 @Controller
 @RequestMapping("/feedback")
 public class FeedBackController {
 	@Autowired
 	FeedBackService feedbckservice;
+	@Autowired 
+	Usersdetail userdetail;
 
 	@GetMapping("/feedbacklist")
 	public String getAllfeedback(Model model) {
@@ -53,5 +57,3 @@ public class FeedBackController {
 	}
 
 }
-
-

@@ -187,7 +187,7 @@ public class AdminController {
 public String getProductBilling(@RequestParam("id") int id, Model model) {
 	ProductBillingDTO dto = new ProductBillingDTO();
 	model.addAttribute("products", productService.getProductBillingDTO(id));
-	model.addAttribute("getbill", productService.getAllbilldetails());
+	model.addAttribute("getbill", productService.getAllProducts());
 	return "product-billing";
 }
 }

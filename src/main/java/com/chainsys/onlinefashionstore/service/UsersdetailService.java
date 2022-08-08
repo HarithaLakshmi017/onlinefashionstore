@@ -22,7 +22,7 @@ public class UsersdetailService {
 	@Autowired
 	BillinginvoiceRepository billinginvoiceRepository;
 	@Autowired
-	FeedBackRepository feedbackReository;
+	FeedBackRepository feedbackRepository;
 
 	public List<Usersdetail> getAllUserdetails() {
 		return userRepository.findAll();
@@ -44,8 +44,8 @@ public class UsersdetailService {
 	public UserBillingDTO getUserBillingDTO(int id) {
 		UserBillingDTO dto = new UserBillingDTO();
 		BillingInvoice bill = new BillingInvoice();
-		dto.setUserId(userRepository.findById(id));
-		dto.setBillingInvoices(billinginvoiceRepository.findAll());
+		dto.setUsersdetail(userRepository.findById(id));
+	    dto.setBillingInvoices(billinginvoiceRepository.findAll());
 		return dto;
 	}
 
@@ -53,7 +53,7 @@ public class UsersdetailService {
 		UserFeedbackDTO dto = new UserFeedbackDTO();
 		FeedBack feedb = new FeedBack();
 		dto.setUsersdetail(userRepository.findById(id));
-		dto.setFeedBack(feedbackReository.findAll());
+		dto.setFeedBack(feedbackRepository.findAll());
 		return dto;
 	}
 }

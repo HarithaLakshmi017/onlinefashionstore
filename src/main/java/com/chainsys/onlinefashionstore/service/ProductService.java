@@ -9,6 +9,7 @@ import com.chainsys.onlinefashionstore.dto.ProductBillingDTO;
 import com.chainsys.onlinefashionstore.dto.UserBillingDTO;
 import com.chainsys.onlinefashionstore.model.BillingInvoice;
 import com.chainsys.onlinefashionstore.model.Product;
+import com.chainsys.onlinefashionstore.repository.BillinginvoiceRepository;
 import com.chainsys.onlinefashionstore.repository.ProductRepository;
 import com.chainsys.onlinefashionstore.repository.UsersdetailRepository;
 
@@ -20,6 +21,8 @@ public class ProductService {
 
 	@Autowired
 	UsersdetailRepository userrepository;
+	@Autowired
+	BillinginvoiceRepository billinginvoiceRepository;
 
 	public List<Product> getAllProducts() {
 		return productRepository.findAll();
@@ -55,7 +58,7 @@ public class ProductService {
 		ProductBillingDTO dto = new ProductBillingDTO();
 		BillingInvoice bill = new BillingInvoice();
 		dto.setProductId(productRepository.findById(id));
-		dto.setBillingInvoices(userrepository.findAll());
+		dto.setBillingInvoices(billinginvoiceRepository.findAll());
 		return dto;
 	}
 }

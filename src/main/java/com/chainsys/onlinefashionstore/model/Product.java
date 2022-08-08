@@ -9,72 +9,94 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "product")
 public class Product {
 
-	
-//	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
-	@Column(name="PRODUCT_ID")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@NotEmpty
+	@Column(name = "PRODUCT_ID")
 	private long productId;
-	@Column(name="PRODUCT_NAME")
+	@NotEmpty
+	@Size(min = 10, max = 20, message = "Please enter characters only")
+	@Column(name = "PRODUCT_NAME")
 	private String productName;
-	@Column(name="RATE")
+	@Column(name = "RATE")
 	private double rate;
-	@Column(name="CATEGORY_NO")
+	@NotEmpty
+	@Size(min = 2, max = 5, message = "Please enter integer only")
+	@Column(name = "CATEGORY_NO")
 	private int categoryNo;
-	@Column(name="STOCK_IN_HAND")
+	@NotEmpty
+	@Size(min = 50, max = 100, message = "Please enter integer only")
+	@Column(name = "STOCK_IN_HAND")
 	private int stockInhand;
-	@Column(name="PRODUCT_DESCRIPTION")
+	@NotEmpty
+	@Size(min = 30, max = 50, message = "Please enter characters only")
+	@Column(name = "PRODUCT_DESCRIPTION")
 	private String productDescription;
-	@Column(name="PRODUCT_IMAGE")
+	@Column(name = "PRODUCT_IMAGE")
 	private String productImage;
 	public long getProductId() {
 		return productId;
 	}
+
 	public void setProductId(long productId) {
 		this.productId = productId;
 	}
+
 	public String getProductName() {
 		return productName;
 	}
+
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
+
 	public double getRate() {
 		return rate;
 	}
+
 	public void setRate(double rate) {
 		this.rate = rate;
 	}
+
 	public int getCategoryNo() {
 		return categoryNo;
 	}
+
 	public void setCategoryNo(int categoryNo) {
 		this.categoryNo = categoryNo;
 	}
+
 	public int getStockInhand() {
 		return stockInhand;
 	}
+
 	public void setStockInhand(int stockInhand) {
 		this.stockInhand = stockInhand;
 	}
+
 	public String getProductDescription() {
 		return productDescription;
 	}
+
 	public void setProductDescription(String productDescription) {
 		this.productDescription = productDescription;
 	}
+
 	public String getProductImage() {
 		return productImage;
 	}
+
 	public void setProductImage(String productImage) {
 		this.productImage = productImage;
 	}
-	
-	
+
 }
-	

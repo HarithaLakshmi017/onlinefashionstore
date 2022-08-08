@@ -2,9 +2,12 @@ package com.chainsys.onlinefashionstore.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.chainsys.onlinefashionstore.dto.UserBillingDTO;
 import com.chainsys.onlinefashionstore.dto.UserFeedbackDTO;
 import com.chainsys.onlinefashionstore.model.Usersdetail;
+import com.chainsys.onlinefashionstore.repository.UsersdetailRepository;
 import com.chainsys.onlinefashionstore.service.BillinginvoiceService;
 import com.chainsys.onlinefashionstore.service.UsersdetailService;
 
@@ -22,6 +26,8 @@ import com.chainsys.onlinefashionstore.service.UsersdetailService;
 public class UsersdetailController {
 	@Autowired
 	UsersdetailService usersdetailservice;
+	@Autowired
+	UsersdetailRepository userdetailrepo;
 	
 
 	@GetMapping("/userlist")
@@ -38,7 +44,7 @@ public class UsersdetailController {
 		return "add-user-form";
 	}
 
-	@PostMapping("/adduser")
+	@PostMapping("/add")
 	public String addNewUser(@ModelAttribute("addusers") Usersdetail theuser) {
 		usersdetailservice.saveAll(theuser);
 		return "redirect:/user/userlist";
@@ -90,11 +96,20 @@ public class UsersdetailController {
 		return "user-billing";
 	}
 
-	@GetMapping("/getuserfeedback")
-	public String getUserFeedback(@RequestParam("id") int id, Model model) {
-		UserFeedbackDTO dto = new UserFeedbackDTO();
-		model.addAttribute("userdetail", usersdetailservice.getUserFeedbackDTO(id));
-		model.addAttribute(usersdetailservice.getAllUserdetails());
-		return "user-feedback";
-	}
-}
+
+ @GetMapping("/userregisterform")
+ public String userregister(Model model) {
+	 Usersdetail user = new Usersdetail();
+	 model.addAttribute("user", user);
+	 return "register";
+ }
+ 
+  @PostMapping("/register")
+  public String adduser(@Valid @ModelAttribute("user") Usersdetail userregister,Model model,Errors errors) {
+	  if(errors.hasErrors()) {
+		  return "register";
+	  }
+	  userdetailrepo.save(userregister);
+	  return "admin";
+	  }
+  }
