@@ -13,11 +13,11 @@ public class BillinginvoiceService {
 		@Autowired
 		private  BillinginvoiceRepository billinvoiceRepo;
 		
-		public  BillingInvoice findById(int id) {
+		public  BillingInvoice findByBillId(long id) {
 			return billinvoiceRepo.findById(id);
 		}
 		
-		public  BillingInvoice deleteById(int billid) {
+		public  BillingInvoice deleteBillById(long billid) {
 			return billinvoiceRepo.deleteById(billid);
 		}
 		
@@ -29,11 +29,6 @@ public class BillinginvoiceService {
 			return billinvoiceRepo.findAll();
 		}
 
-//		public List<BillingInvoice> getUserBillingDTO() {
-//		
-//			return billinvoiceRepo.findAll();
-//		}
-//	
 
 }
 

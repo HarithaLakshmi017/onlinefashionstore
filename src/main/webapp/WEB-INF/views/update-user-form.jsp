@@ -12,12 +12,6 @@
 	<div id="root">
 		<div id="form">
 			<form:form action="update" method="post" modelAttribute="updateuser">
-			<div>
-					<label for="userId">User Id</label>
-					<div>
-						<form:input path="userId" />
-					</div>
-					</div>
 					<div>
 					<label for="userName">User Name</label>
 					<div>

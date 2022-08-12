@@ -41,19 +41,9 @@ public class UsersdetailService {
 		userRepository.deleteById(id);
 	}
 
-	public UserBillingDTO getUserBillingDTO(int id) {
-		UserBillingDTO dto = new UserBillingDTO();
-		BillingInvoice bill = new BillingInvoice();
-		dto.setUsersdetail(userRepository.findById(id));
-	    dto.setBillingInvoices(billinginvoiceRepository.findAll());
-		return dto;
+	public Usersdetail getUserNameAndPasswordAndRole(String userName, String password, String role) {
+		return userRepository.findByUserNameAndPasswordAndRole(userName, password, role);
 	}
 
-	public UserFeedbackDTO getUserFeedbackDTO(int id) {
-		UserFeedbackDTO dto = new UserFeedbackDTO();
-		FeedBack feedb = new FeedBack();
-		dto.setUsersdetail(userRepository.findById(id));
-		dto.setFeedBack(feedbackRepository.findAll());
-		return dto;
-	}
+	
 }

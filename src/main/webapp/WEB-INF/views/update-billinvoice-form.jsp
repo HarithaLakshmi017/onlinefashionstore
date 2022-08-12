@@ -50,12 +50,6 @@
 					</div>
 				</div>
 				<div>
-					<label for="billingId">Billing Id</label>
-					<div>
-						<form:input path="billingId" />
-					</div>
-				</div>
-				<div>
 					<label for="billDate">Bill Date</label>
 					<div>
 						<form:input path="billDate" />

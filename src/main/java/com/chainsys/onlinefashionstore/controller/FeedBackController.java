@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.onlinefashionstore.model.FeedBack;
-import com.chainsys.onlinefashionstore.model.Usersdetail;
+
 import com.chainsys.onlinefashionstore.service.FeedBackService;
 
 @Controller
@@ -20,8 +20,7 @@ import com.chainsys.onlinefashionstore.service.FeedBackService;
 public class FeedBackController {
 	@Autowired
 	FeedBackService feedbckservice;
-	@Autowired 
-	Usersdetail userdetail;
+	
 
 	@GetMapping("/feedbacklist")
 	public String getAllfeedback(Model model) {
@@ -44,7 +43,7 @@ public class FeedBackController {
 	}
 
 	@GetMapping("/updatefeedback")
-	public String showFeedBackForm(@RequestParam("Id") long id, Model model) {
+	public String showFeedBackForm(@RequestParam("Id") int id, Model model) {
 		FeedBack feedbacklist = feedbckservice.findById(id);
 		model.addAttribute("updatefeedback", feedbacklist);
 		return "update-feedback-form";

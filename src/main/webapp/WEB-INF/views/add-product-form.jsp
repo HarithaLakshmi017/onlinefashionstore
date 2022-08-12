@@ -9,57 +9,58 @@
 <title>Add Product name</title>
 </head>
 <body>
-	<div id="root">
-		<div id="form">
-			<form:form action="add" method="post" modelAttribute="addproduct">
-				<div>
-					<label for="productId">Product Id</label>
-					<div>
-						<form:input path="productId" />
-					</div>
+	<h1 align="center">Add Product</h1>
+	<div id="table root"></div>
+		<table border="2" align="center">
+			<div id="root"></div>
+		</table>
+		<div id="form" align="center"></div>
 
+			<div id="root">
+				<div id="form">
+					<form:form action="add" method="post" modelAttribute="addproduct">
+						
+						<div>
+							<label for="productName">Product Name</label>
+							<div>
+								<form:input path="productName" />
+							</div>
+						</div>
+						<div>
+							<label for="rate">Rate</label>
+							<div>
+								<form:input path="rate" />
+							</div>
+						</div>
+						<div>
+							<label for="categoryNo">Category No</label>
+							<div>
+								<form:input path="categoryNo" />
+							</div>
+						</div>
+						<div>
+							<label for="stockInhand">Stock in Hand</label>
+							<div>
+								<form:input path="stockInhand" />
+							</div>
+						</div>
+						<div>
+							<label for="productDescription">Product Description</label>
+							<div>
+								<form:input path="productDescription" />
+							</div>
+						</div>
+						<div>
+							<label for="productImage">Product Image</label>
+							<div>
+								<form:input path="productImage" />
+							</div>
+							<div></div>
+							<div>
+								<form:button>Add New</form:button>
+							</div>
+					</form:form>
 				</div>
-				<div>
-					<label for="productName">Product Name</label>
-					<div>
-						<form:input path="productName" />
-					</div>
-				</div>
-				<div>
-					<label for="rate">Rate</label>
-					<div>
-						<form:input path="rate" />
-					</div>
-				</div>
-				<div>
-					<label for="categoryNo">Category No</label>
-					<div>
-						<form:input path="categoryNo" />
-					</div>
-				</div>
-				<div>
-					<label for="stockInhand">Stock in Hand</label>
-					<div>
-						<form:input path="stockInhand" />
-					</div>
-				</div>
-				<div>
-					<label for="productDescription">Product Description</label>
-					<div>
-						<form:input path="productDescription" />
-					</div>
-				</div>
-				<div>
-					<label for="productImage">Product Image</label>
-					<div>
-						<form:input path="productImage" />
-					</div>
-					<div></div>
-					<div>
-						<form:button>Add New</form:button>
-					</div>
-			</form:form>
-		</div>
-	</div>
+			</div>
 </body>
 </html>

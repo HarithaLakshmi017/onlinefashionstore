@@ -49,12 +49,6 @@
 					</div>
 				</div>
 				<div>
-					<label for="productId">Product Id</label>
-					<div>
-						<form:input path="productId" />
-					</div>
-				</div>
-				<div>
 					<form:button>Update Product</form:button>
 				</div>
 			</form:form>

@@ -92,20 +92,8 @@ label {
 <body>
 	<div id="root">
 		<div id="form">
-			<form:form action="adduser" method="post" modelAttribute="addusers">
-				<div>
-					<label for="userId">User Id</label>
-					<div>
-						<form:input path="userId" />
-					</div>
-				</div>
-
-				<div>
-					<label for="userName">User Name</label>
-					<div>
-						<form:input path="userName" />
-					</div>
-				</div>
+			<form:form action="add" method="post" modelAttribute="adduserdetail">
+			
 				<div>
 					<label for="phoneNumber">Phone number</label>
 					<div>
@@ -141,6 +129,12 @@ label {
 					<label for="role">Role</label>
 					<div>
 						<form:input path="role" />
+					</div>
+				</div>
+				<div>
+					<label for="userName">User Name</label>
+					<div>
+						<form:input path="userName" />
 					</div>
 				</div>
 

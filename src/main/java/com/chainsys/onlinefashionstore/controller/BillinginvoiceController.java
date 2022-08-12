@@ -17,8 +17,6 @@ import com.chainsys.onlinefashionstore.service.BillinginvoiceService;
 @Controller
 @RequestMapping("/")
 public class BillinginvoiceController {
-	
-	
 		@Autowired
 		BillinginvoiceService billinvoiceservice;
 
@@ -30,8 +28,8 @@ public class BillinginvoiceController {
 		}
 
 		@GetMapping("/findbillinvoiceid")
-		public String findDetailById(@RequestParam("id") int id, Model model) {
-			BillingInvoice billinvoicelist = billinvoiceservice.findById(id);
+		public String findDetailById(@RequestParam("id") long id, Model model) {
+			BillingInvoice billinvoicelist = billinvoiceservice.findByBillId(id);
 			model.addAttribute("findById", billinvoicelist);
 			return "find-billinvoice-id-form";
 		}
@@ -50,8 +48,8 @@ public class BillinginvoiceController {
 		}
 
 		@GetMapping("/updatebillinvoiceform")
-		public String showUpdateForm(@RequestParam("Id") int id, Model model) {
-			BillingInvoice billinvoicelist = billinvoiceservice.findById(id);
+		public String showUpdateForm(@RequestParam("Id") long id, Model model) {
+			BillingInvoice billinvoicelist = billinvoiceservice.findByBillId(id);
 			model.addAttribute("updatebillinvoice", billinvoicelist);
 			return "update-billinvoice-form";
 		}
@@ -63,8 +61,8 @@ public class BillinginvoiceController {
 		}
 
 		@GetMapping("/deletebillinvoice")
-		public String deleteBill(@RequestParam("Id") int id) {
-			billinvoiceservice.deleteById(id);
+		public String deleteBill(@RequestParam("Id") long id) {
+			billinvoiceservice.deleteBillById(id);
 			return "redirect:/billinginvoice";
 		}
    

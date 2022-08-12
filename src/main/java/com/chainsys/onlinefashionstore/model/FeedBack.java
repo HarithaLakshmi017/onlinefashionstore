@@ -1,10 +1,13 @@
 package com.chainsys.onlinefashionstore.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
@@ -13,39 +16,26 @@ import javax.validation.constraints.Size;
 @Table(name = "feedback")
 
 public class FeedBack {
-	@NotEmpty
-	@Size(min = 2, max = 5, message = "Please enter integer only")
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "feedback_id_REF")
+	@SequenceGenerator(name = "feedback_id_REF", sequenceName = "feedback_id_REF", allocationSize = 1)
 	@Column(name = "feedback_id")
-	private String feedbackId;
-	@NotEmpty
-	@Size(min = 100, max = 200, message = "Please enter characters only")
+	private int feedbackId;
 	@Column(name = "feed_back")
 	private String feedback;
-	@NotEmpty
-	@Size(min = 8, max = 8, message = "Please enter valid date only")
 	@Column(name = "feedback_date")
 	private Date feedbackDate;
-	@Id
-	@NotEmpty
-	@Size(min = 2, max = 5, message = "Please enter integer only")
+
 	@Column(name = "user_id")
-	private long userId;
+	private int userId;
 
-	public long getUserId() {
-		return userId;
-	}
-
-	public void setUserId(long userId) {
-		this.userId = userId;
-	}
-	public String getFeedbackId() {
+	public int getFeedbackId() {
 		return feedbackId;
 	}
 
-	public void setFeedbackId(String feedbackId) {
+	public void setFeedbackId(int feedbackId) {
 		this.feedbackId = feedbackId;
 	}
-	
 
 	public String getFeedback() {
 		return feedback;
@@ -61,6 +51,14 @@ public class FeedBack {
 
 	public void setFeedbackDate(Date feedbackDate) {
 		this.feedbackDate = feedbackDate;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
 }

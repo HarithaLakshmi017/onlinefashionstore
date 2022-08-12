@@ -8,11 +8,11 @@ import org.springframework.stereotype.Repository;
 import com.chainsys.onlinefashionstore.model.FeedBack;
 
 @Repository
-	public interface FeedBackRepository extends JpaRepository<FeedBack,Long>{
+	public interface FeedBackRepository extends JpaRepository<FeedBack,Integer>{
 		//List<Product> findAllById();
 		FeedBack save(FeedBack fb);
-		FeedBack findById(long id);
-		FeedBack deleteById(long feedbackId);
+		FeedBack findById(int id);
+		FeedBack deleteById(int feedbackId);
 		List<FeedBack> findAll();
 //		List<Product> findAllById(long id);
 

@@ -10,13 +10,14 @@
 </head>
 <div id="table root">
 	       
-	<table>
-		<thead>
-		<tr>
+	<table align="center">
 
-			<th>category No</th>
-			<th>category Name</th>
-		</tr>
+		<thead>
+			<tr>
+
+				<th>category No</th>
+				<th>category Name</th>
+			</tr>
 
 		</thead>
 

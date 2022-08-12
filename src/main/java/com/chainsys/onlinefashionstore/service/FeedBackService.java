@@ -13,11 +13,11 @@ public class FeedBackService {
 		@Autowired
 		private  FeedBackRepository feedbackRepo;
 		
-		public  FeedBack findById(long id) {
+		public  FeedBack findById(int id) {
 			return feedbackRepo.findById(id);
 		}
 		
-		public FeedBack deleteById(long feedbackid) {
+		public FeedBack deleteById(int feedbackid) {
 			return feedbackRepo.deleteById(feedbackid);
 		}
 		

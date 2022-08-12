@@ -26,9 +26,9 @@
                     <tr>
                         <td>${product.productId}</td>
                         <td>${product.productName}</td>
+                        <td>${product.rate}</td>
                         <td>${product.categoryNo}</td>
                         <td>${product.stockInhand}</td>
-                        <td>${product.rate}</td>
                         <td>${product.productDescription}</td>
                         <td>${product.productImage}</td>
                     </tr>

@@ -18,7 +18,6 @@
 			<th>Email</th>
 			<th>Password</th>
 			<th>Address</th>
-			<th>Gender</th>
 			<th>Role</th>
 			<th>User Id</th>
 			<th>User Name</th>
@@ -36,7 +35,6 @@
 					<td>${users.email}</td>
 					<td>${users.password}</td>
 					<td>${users.address}</td>
-					<td>${users.gender}</td>
 					<td>${users.role}</td>
 					<td>${users.userId}</td>
 					<td>${users.userName}</td>

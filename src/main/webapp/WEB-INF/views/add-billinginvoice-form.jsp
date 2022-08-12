@@ -18,13 +18,13 @@
 					<label for="userId">User Id</label>
 				</div>
 				<div>
-					<form:input path="userId" />
+					<form:input path="userId" title="enter a valid userId" pattern="^[a-zA-Z\\d*]{8,20}$"/>
 				</div>
 				<div>
 					<label for="productId">Product Id</label>
 				</div>
 				<div>
-					<form:input path="productId" />
+					<form:input path="productId" title="enter a valid productId" pattern="^[a-zA-Z\\d*]{8,20}$"/>
 				</div>
 				<div>
 					<label for="quantity">Quantity</label>
@@ -51,16 +51,10 @@
 					<form:input path="modeOfPayment" />
 				</div>
 				<div>
-					<label for="billingId">Billing Id</label>
-				</div>
-				<div>
-					<form:input path="billingId" />
-				</div>
-				<div>
 					<label for="billDate">Bill Date</label>
 				</div>
 				<div>
-					<form:input path="billDate" />
+					<form:input path="billDate" type="date"/>
 				</div>
 
 				<form:button>Add New</form:button>

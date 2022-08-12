@@ -1,5 +1,7 @@
 package com.chainsys.onlinefashionstore.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -9,40 +11,33 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "product")
 public class Product {
-
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@NotEmpty
+	@GeneratedValue(strategy=GenerationType.AUTO,generator="PRODUCT_ID_REF")
+    @SequenceGenerator(name="PRODUCT_ID_REF",sequenceName ="PRODUCT_ID_REF",allocationSize = 1)
 	@Column(name = "PRODUCT_ID")
 	private long productId;
-	@NotEmpty
-	@Size(min = 10, max = 20, message = "Please enter characters only")
+	
 	@Column(name = "PRODUCT_NAME")
 	private String productName;
+	
 	@Column(name = "RATE")
 	private double rate;
-	@NotEmpty
-	@Size(min = 2, max = 5, message = "Please enter integer only")
+
 	@Column(name = "CATEGORY_NO")
 	private int categoryNo;
-	@NotEmpty
-	@Size(min = 50, max = 100, message = "Please enter integer only")
 	@Column(name = "STOCK_IN_HAND")
 	private int stockInhand;
-	@NotEmpty
-	@Size(min = 30, max = 50, message = "Please enter characters only")
 	@Column(name = "PRODUCT_DESCRIPTION")
 	private String productDescription;
 	@Column(name = "PRODUCT_IMAGE")
 	private String productImage;
+
 	public long getProductId() {
 		return productId;
 	}
@@ -97,6 +92,30 @@ public class Product {
 
 	public void setProductImage(String productImage) {
 		this.productImage = productImage;
+	}
+
+	@ManyToOne
+	@JoinColumn(name = "CATEGORY_NO", insertable = false, updatable = false, nullable = false)
+
+	private Category category;
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
+	@OneToMany(mappedBy = "product", fetch = FetchType.LAZY)
+	private List<BillingInvoice> billinginvoice;
+
+	public List<BillingInvoice> getBillinginvoice() {
+		return billinginvoice;
+	}
+
+	public void setBillinginvoice(List<BillingInvoice> billinginvoice) {
+		this.billinginvoice = billinginvoice;
 	}
 
 }

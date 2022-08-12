@@ -8,15 +8,15 @@ import org.springframework.stereotype.Repository;
 import com.chainsys.onlinefashionstore.model.Category;
 
 @Repository
-public interface CategoryRepository extends JpaRepository<Category, Integer>{
+public interface CategoryRepository extends JpaRepository<Category,Integer> {
+	
+    Category findByCategoryNo(int id);
+    
+    Category save( Category category);
+    
+    void deleteById(int id);
 
-	Category save(Category category);
-	Category findById(int id);
-	// use for adding a new doctor
-	void deleteById(int categoryNo);
+	 List<Category> findAll();
 
-	List<Category> findAll();
 
 }
-
-    
