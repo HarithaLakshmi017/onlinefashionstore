@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/home")
 public class IndexController {
+
 	@GetMapping("/index")
 	public String getIndex(Model model) {
 		return "index";
@@ -17,5 +18,5 @@ public class IndexController {
 	public String AdminAccess(Model model) {
 		return "adminaccess";
 	}
-
+	
 }

@@ -41,7 +41,7 @@ nav .menu {
 
 .menu .logo a {
 	text-decoration: none;
-	color: #DEB887;
+	color: #DA70D6;
 	font-size: 35px;
 	font-weight: 600;
 }
@@ -61,7 +61,7 @@ nav .menu {
 
 .menu ul li a {
 	text-decoration: none;
-	color: #DEB887;
+	color: #DA70D6;
 	font-size: 18px;
 	font-weight: 500;
 	padding: 8px 15px;
@@ -70,7 +70,7 @@ nav .menu {
 }
 
 .menu ul li a:hover {
-	background: #DEB887;
+	background: #DA70D6;
 	color: black;
 }
 
@@ -130,8 +130,12 @@ nav .menu {
 	color: black;
 }
 
+mark{
+ background-color:#DA70D6;
+}
+
 body {
-	background-image: url('file:///C:/Users/hari3105/Downloads/6097783.jpg');
+	background-image:url('https://images.unsplash.com/photo-1559619081-8fd2cc754ca3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzB8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
@@ -152,8 +156,7 @@ body {
 	</nav>
 	<div class="img"></div>
 	<div class="center">
-		<div class="title">Get the fashion advice</div>
-		<div class="sub_title">keep them talking</div>
+		<div class="title"><mark>Go</mark> forth & look <mark>fabulous!</mark></div>
 		<div class="btns"></div>
 	</div>
 </body>

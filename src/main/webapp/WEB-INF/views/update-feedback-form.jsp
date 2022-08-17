@@ -7,6 +7,52 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Update Product</title>
+<style type="text/css">
+body {
+
+h1 {
+	backgroundcolor: #FFE4C4;
+}
+label {
+	backgroundcolor: #FFE4C4;
+	font-size: 1.3em;
+	display: flex;
+	margin: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+#userId {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#email {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#feedbackDate {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#feedback {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+
+}
+
+</style>
 </head>
 <body>
 <div id="root">
@@ -27,7 +73,7 @@
 				<div>
 					<label for="feedbackDate">FeedBack Date</label>
 					<div>
-						<form:input path="feedbackDate" />
+						<form:input path="feedbackDate" type="date"/>
 					</div>
 				</div>
 				<div>

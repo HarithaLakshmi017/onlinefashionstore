@@ -7,19 +7,45 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>List-FeedBack</title>
+<style type="text/css">
+table, tb {
+	width: 50%;
+	padding: 15px;
+	text-align: left;
+}
+
+th, td {
+	border: solid 1px #FFFF00;
+	padding: 10px;
+	border-color: #FFA07A;
+}
+
+th, td {
+	color: white;
+}
+
+body {
+	background-image:
+		url('');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+</style>
 </head>
 <div id="table root">
 	       
 	<table>
 		<thead>
-		<tr>
+			<tr>
 
-			<th>FeedBack Id</th>
-			<th>User Id</th>
-			<th>FeedBack</th>
-			<th>FeedBack Date</th>
-			
-		</tr>
+				<th>FeedBack Id</th>
+				<th>User Id</th>
+				<th>FeedBack</th>
+				<th>FeedBack Date</th>
+
+			</tr>
 
 		</thead>
 
@@ -32,7 +58,9 @@
 					<td>${feedbacklist.userId}</td>
 					<td>${feedbacklist.feedback}</td>
 					<td>${feedbacklist.feedbackDate}</td>
-					
+					<td><a
+						href="updatefeedback?Id=${feedbacklist.feedbackId}"><input
+							onclick="change()" type="button" value="Update" id="myButton1"></input></a></td>
 
 				</tr>
                 </c:forEach>

@@ -31,6 +31,10 @@
                         <td>${product.stockInhand}</td>
                         <td>${product.productDescription}</td>
                         <td>${product.productImage}</td>
+                        <td><a href="updateProductform?id=${product.productId}"><input
+                            onclick="change()" type="button" value="Update" id="myButton1"></input></a></td>
+                    <td><a href="deleteproduct?id=${product.productId}"><input
+                            onclick="change()" type="button" value="Delete" id="myButton2"></input></a></td>
                     </tr>
                 </c:forEach>
             </tbody>

@@ -5,7 +5,6 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -16,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.onlinefashionstore.model.BillingInvoice;
-import com.chainsys.onlinefashionstore.model.Product;
 import com.chainsys.onlinefashionstore.model.Usersdetail;
 import com.chainsys.onlinefashionstore.repository.UsersdetailRepository;
 import com.chainsys.onlinefashionstore.service.BillinginvoiceService;
@@ -99,10 +97,10 @@ public class UsersdetailController {
 				user.getRole());
 		if (users != null) {
 			if ("admin".equals(users.getRole())) {
-				return "redirect:/admin/user-list";
+				return "redirect:/admin/adminview";
 				
 			} else {
-				return "redirect:/admin/product-home";
+				return "redirect:/admin/product";
 			}
 		} else {
 			return "invalid-user-error";

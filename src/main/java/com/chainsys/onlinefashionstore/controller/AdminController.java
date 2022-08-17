@@ -32,11 +32,15 @@ public class AdminController {
 	public String adminHome() {
 		return "login";
 	}
+	@GetMapping("/adminview")
+	public String adminView() {
+		return "admin-login";
+	}
 	@GetMapping("/product")
 	public String productHome() {
 		return "product-home";
 	}
-	@RequestMapping("/categorylist")
+	@GetMapping("/categorylist")
 	public String getAllcategory(Model model) {
 		List<Category> categorylist = categoryService.getCategory();
 		model.addAttribute("allcategory", categorylist);
@@ -91,7 +95,7 @@ public class AdminController {
 	}
 
 	@PostMapping("/add")
-	public String addproduct(@ModelAttribute("addproductform") Product prod) {
+	public String addproduct(@ModelAttribute("addproduct") Product prod) {
 		productService.save(prod);
 		return "redirect:/admin/productlist";
 	}
@@ -104,7 +108,7 @@ public class AdminController {
 	}
 
 	@PostMapping("/updateProduct")
-	public String updateProduct(@ModelAttribute("updateproduct") Product pro) {
+	public String updateProduct(@ModelAttribute("updateproductId") Product pro) {
 		productService.save(pro);
 		return "redirect:/admin/productlist";
 	}
@@ -147,6 +151,31 @@ public class AdminController {
 	 return "product-billing";
 	}
 	
+	@GetMapping("/men")
+	public String men(Model model) {
+		return "men";
+	}
 	
-}
+	@GetMapping("/women")
+	public String women(Model model) {
+		return "women";
+	}
+		
+    @GetMapping("/mensweatshirts")
+    public String sweatshirt(Model model) {
+    	return "mensweatshirts";
+    }
+    @GetMapping("/shirts")
+    public String shirts(Model model) {
+    	return "shirts";
+    }
+    @GetMapping("/menjackets")
+    public String jackets(Model model) {
+    	return "menjackets";
+    }
+		
+	}
+	
+	
+
 

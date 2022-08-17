@@ -7,6 +7,34 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>List-Category</title>
+<style type="text/css">
+table, tb {
+	width: 50%;
+	padding: 15px;
+	text-align: left;
+}
+
+th, td {
+	border: solid 1px #777;
+	padding: 10px;
+	border-color: #cc0033;
+}
+
+td {
+	color: #000000;
+}
+
+tr {
+	color: white;
+}
+
+body {
+	background-image: url('');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+</style>
 </head>
 <div id="table root">
 	       
@@ -28,7 +56,11 @@
 
 					<td>${category.categoryNo}</td>
 					<td>${category.categoryName}</td>
-
+					<td><a href="updateCategoryform?categoryNo=${category.categoryNo}"><input
+							onclick="change()" type="button" value="Update" id="myButton1"></input></a></td>
+					<td><a
+						href="deleteCategory?categoryNo=${category.categoryNo}"><input
+							onclick="change()" type="button" value="Delete" id="myButton2"></input></a></td>
 				</tr>
                 </c:forEach>
 		</tbody>

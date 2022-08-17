@@ -51,12 +51,6 @@
 					</div>
 				</div>
 				<div>
-					<label for="gender">Gender</label>
-					<div>
-						<form:input path="gender" />
-					</div>
-				</div>
-				<div>
 					<label for="role">Role</label>
 					<div>
 						<form:input path="role" />

@@ -7,6 +7,66 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Update Product</title>
+<style type="text/css">
+body {
+
+h1 {
+	backgroundcolor: #FFE4C4;
+}
+label {
+	backgroundcolor: #FFE4C4;
+	font-size: 1.3em;
+	display: flex;
+	margin: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+#productName {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#rate {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#categoryNo {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#stockInhand {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#productDescription {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#log {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 14px;
+	padding-left: 10px;
+	color: blue;
+}
+
+</style>
 </head>
 <body>
 <div id="root">

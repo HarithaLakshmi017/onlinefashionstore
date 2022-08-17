@@ -71,7 +71,8 @@ label {
 	border-radius: 3px;
 	padding-left: 8px;
 	}
-	#gender {
+	
+#userName {
 	width: 280px;
 	height: 40px;
 	border: none;
@@ -102,7 +103,7 @@ label {
 
 				</div>
 				<div>
-					<label for="email">Email Id</label>
+					<label for="email">Email</label>
 					<div>
 						<form:input path="email" />
 					</div>
@@ -117,12 +118,6 @@ label {
 					<label for="address">Address</label>
 					<div>
 						<form:input path="address" />
-					</div>
-				</div>
-				<div>
-					<label for="gender">Gender</label>
-					<div>
-						<form:input path="gender" />
 					</div>
 				</div>
 				<div>

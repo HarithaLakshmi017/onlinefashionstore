@@ -10,7 +10,7 @@
 <style type="text/css">
 body {
 	background-image:
-		url("file:///C:/Users/hari3105/Downloads/istockphoto-1181376840-612x612.jpg");
+		url("https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA0fHxmYXNoaW9uJTIwYWVzdGhldGljfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
@@ -44,13 +44,6 @@ label {
 	padding-left: 8px;
 }
 
-#role {
-	width: 250px;
-	height: 30px;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-
 #phoneNumber {
 	width: 250px;
 	height: 30px;
@@ -72,7 +65,7 @@ label {
 	padding-left: 8px;
 }
 
-#log {
+#email {
 	width: 250px;
 	height: 30px;
 	border: none;

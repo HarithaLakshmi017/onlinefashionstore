@@ -5,7 +5,6 @@ import java.util.List;
 
 import com.chainsys.onlinefashionstore.model.BillingInvoice;
 import com.chainsys.onlinefashionstore.model.Product;
-import com.chainsys.onlinefashionstore.model.Usersdetail;
 
 public class ProductBillingDTO {
 	
@@ -22,7 +21,7 @@ public class ProductBillingDTO {
 		return product;
 	}
 	public void setProductId(Product prod) {
-		this.product = product;
+		this.product = prod;
 	}
 	  
 

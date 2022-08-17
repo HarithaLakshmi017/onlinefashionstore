@@ -6,13 +6,22 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add FeedBack</title>
-<style>
-h1 {
-	color: #ff9999;
+<style type = "text/css">
+body {
+	background: #456;
+	background-image:
+		url('https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	}
+	
+ h1 {
+	color: #0000;
 }
 
 label {
-	color: #ff9999;
+	color: #0000;
 	font-size: 1.3em;
 	display: flex;
 	margin: 5px;
@@ -30,7 +39,7 @@ label {
 	border-radius: 5px;
 }
 
-#password {
+#feedback {
 	width: 250px;
 	height: 30px;
 	border-color: black;
@@ -39,7 +48,7 @@ label {
 	border-radius: 5px;
 }
 
-#log {
+#feedbackDate {
 	width: 250px;
 	height: 30px;
 	border-color: black;
@@ -47,7 +56,6 @@ label {
 	padding-left: 10px;
 	color: blue;
 }
-
 .box {
 	width: 400px;
 	height: 490px;
@@ -57,6 +65,7 @@ label {
 	margin: auto;
 	padding: 10px;
 	text-align: center;
+	background-color: #00000;
 }
 </style>
 </head>
@@ -86,7 +95,7 @@ label {
 					<label for="feedbackDate">FeedBack Date</label>
 				</div>
 				<div>
-					<form:input path="feedbackDate" type ="date"/>
+					<form:input path="feedbackDate" type="date"/>
 				</div>
 
 				<form:button>Add FeedBack</form:button>
