@@ -10,6 +10,7 @@ import com.chainsys.onlinefashionstore.model.FeedBack;
 @Repository
 	public interface FeedBackRepository extends JpaRepository<FeedBack,Integer>{
 		//List<Product> findAllById();
+		@SuppressWarnings("unchecked")
 		FeedBack save(FeedBack fb);
 		FeedBack findById(int id);
 		FeedBack deleteById(int feedbackId);

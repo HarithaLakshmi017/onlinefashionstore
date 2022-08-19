@@ -15,7 +15,8 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
 	  
 	  List<Product> findAll();
 	  
-      Product save(Product product);
+      @SuppressWarnings("unchecked")
+	Product save(Product product);
       
       void deleteByProductId(Product id);
 	

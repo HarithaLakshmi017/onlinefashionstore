@@ -29,7 +29,7 @@ public class BillingInvoice {
 	@Column(name = "QUANTITY")
 	private int quantity;
 	@Column(name = "RATE")
-	private int rate;
+	private double rate;
 	@Column(name = "BILL_AMOUNT")
 	private float billAmount;
 	
@@ -78,11 +78,11 @@ public class BillingInvoice {
 		this.quantity = quantity;
 	}
 
-	public int getRate() {
+	public double getRate() {
 		return rate;
 	}
 
-	public void setRate(int rate) {
+	public void setRate(double rate) {
 		this.rate = rate;
 	}
 

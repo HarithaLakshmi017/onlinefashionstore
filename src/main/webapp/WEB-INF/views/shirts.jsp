@@ -329,26 +329,27 @@
 
 .images__card {
 	margin: 1rem;
-	height: 200px;
-	width: 200px;
+	height: 420px;
+	width: 400px;
 	border-radius: 20px;
 	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
 		rgba(17, 17, 17, 0.6) 100%),
-		url('https://images.unsplash.com/photo-1618001789159-ffffe6f96ef2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60');
+		url('https://images.unsplash.com/photo-1602810318660-d2c46b750f88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: relative;
 	color: #fff;
 }
 
+
 .images__card:nth-child(2) {
 	margin: 1rem;
-	height: 200px;
-	width: 200px;
+	height: 420px;
+	width: 400px;
 	border-radius: 20px;
 	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
 		rgba(17, 17, 17, 0.6) 100%),
-		url('https://images.unsplash.com/photo-1586798658502-0dc367cb2776?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTN8fHNoaXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+		url('https://images.unsplash.com/photo-1602810320073-1230c46d89d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: relative;
@@ -357,54 +358,53 @@
 
 .images__card:nth-child(3) {
 	margin: 1rem;
-	height: 200px;
-	width: 200px;
+	height: 420px;
+	width: 400px;
 	border-radius: 20px;
 	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
 		rgba(17, 17, 17, 0.6) 100%),
-		url('https://images.unsplash.com/photo-1617196552429-d0b632fdad8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTU2fHxzaGlydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
+		url('https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: relative;
 	color: #fff;
 }
+
 
 .images__card:nth-child(4) {
 	margin: 1rem;
-	height: 200px;
-	width: 200px;
+	height: 420px;
+	width: 400px;
 	border-radius: 20px;
 	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
 		rgba(17, 17, 17, 0.6) 100%),
-		url('https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTExfHxjbG90aGluZyUyMG1lbiUyMHNoaXJ0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
+		url('https://n.nordstrommedia.com/id/sr3/9bca596e-4f9b-42b5-9a6e-e8ed287e4f3e.jpeg?h=365&w=240&dpr=2');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: relative;
 	color: #fff;
 }
-
 .images__card:nth-child(5) {
 	margin: 1rem;
-	height: 200px;
-	width: 200px;
+	height: 420px;
+	width: 400px;
 	border-radius: 20px;
 	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
 		rgba(17, 17, 17, 0.6) 100%),
-		url('https://images.pexels.com/photos/3894389/pexels-photo-3894389.jpeg?auto=compress&cs=tinysrgb&w=600');
+		url('https://images.unsplash.com/photo-1603252110971-b8a57087be18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHNoaXJ0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: relative;
 	color: #fff;
 }
-
 .images__card:nth-child(6) {
 	margin: 1rem;
-	height: 200px;
-	width: 200px;
+	height: 420px;
+	width: 400px;
 	border-radius: 20px;
 	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
 		rgba(17, 17, 17, 0.6) 100%),
-		url('https://images.pexels.com/photos/13101950/pexels-photo-13101950.jpeg?auto=compress&cs=tinysrgb&w=600');
+		url('https://images.unsplash.com/photo-1603796908893-e3472142232b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: relative;
@@ -413,81 +413,12 @@
 
 .images__card:nth-child(7) {
 	margin: 1rem;
-	height: 200px;
-	width: 200px;
+	height: 420px;
+	width: 400px;
 	border-radius: 20px;
 	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
 		rgba(17, 17, 17, 0.6) 100%),
-		url('https://images.unsplash.com/photo-1573766713733-18f875c7892d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fG1lbnMlMjBzaGlydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	position: relative;
-	color: #fff;
-}
-
-.images__card:nth-child(8) {
-	margin: 1rem;
-	height: 200px;
-	width: 200px;
-	border-radius: 20px;
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
-		rgba(17, 17, 17, 0.6) 100%),
-		url('');
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	position: relative;
-	color: #fff;
-}
-
-.images__card:nth-child(9) {
-	margin: 1rem;
-	height: 200px;
-	width: 200px;
-	border-radius: 20px;
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
-		rgba(17, 17, 17, 0.6) 100%),
-		url('https://images.unsplash.com/photo-1536766820879-059fec98ec0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fG1lbnMlMjBzaGlydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	position: relative;
-	color: #fff;
-}
-
-.images__card:nth-child(10) {
-	margin: 1rem;
-	height: 200px;
-	width: 200px;
-	border-radius: 20px;
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
-		rgba(17, 17, 17, 0.6) 100%),
-		url('https://images.unsplash.com/photo-1602810320073-1230c46d89d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWVucyUyMHNoaXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	position: relative;
-	color: #fff;
-}
-
-.images__card:nth-child(11) {
-	margin: 1rem;
-	height: 200px;
-	width: 200px;
-	border-radius: 20px;
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
-		rgba(17, 17, 17, 0.6) 100%),
-		url('https://images.unsplash.com/photo-1551628723-952088378fd3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fG1lbnMlMjBzaGlydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	position: relative;
-	color: #fff;
-}
-.images__card:nth-child(12) {
-	margin: 1rem;
-	height: 200px;
-	width: 200px;
-	border-radius: 20px;
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
-		rgba(17, 17, 17, 0.6) 100%),
-		url('https://images.unsplash.com/photo-1626557981101-aae6f84aa6ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fG1lbnMlMjBzaGlydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
+		url('https://images.unsplash.com/photo-1603796908893-e3472142232b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzd8fHNoaXJ0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: relative;
@@ -832,6 +763,10 @@ nav .menu {
 .dropdown:hover .dropdown-content {
 	display: block;
 }
+ a{
+ text-decoration: none;
+ color: #fff
+ }
 </style>
 </head>
 <body>
@@ -858,44 +793,26 @@ nav .menu {
 				<h1>Gallery</h1>
 				<div class="images__container">
 					<div class="images__card" onclick=>
-						<h2>
-							<h2>
+				<a href="/admin/updateProductform?id=133"><h2>shirt with patch pocket</h2></a>
 					</div>
 					<div class="images__card">
-						<h2>
-							<h2>
+				<a href="/admin/updateProductform?id=134"><h2>Slim fit with patch pocket</h2></a>
 					</div>
 					<div class="images__card">
-						<h2></h2>
+				<a href="/admin/updateProductform?id=135"><h2>checked shirt with patch pocket</h2></a>
 					</div>
 					<div class="images__card">
-						<h2></h2>
+				<a href="/admin/updateProductform?id=136"><h2>olive green shirt</h2></a>
 					</div>
 					<div class="images__card">
-						<h2></h2>
+				<a href="/admin/updateProductform?id=137"><h2>blue slim fit shirt</h2></a>
 					</div>
 					<div class="images__card">
-						<h2></h2>
-					</div>
-					<div class="images__card">
-						<h2></h2>
-					</div>
-					<div class="images__card">
-						<h2></h2>
-					</div>
-					<div class="images__card">
-						<h2></h2>
-					</div>
-					<div class="images__card">
-						<h2></h2>
-					</div>
-					<div class="images__card">
-						<h2></h2>
+				<a href="/admin/updateProductform?id=138"><h2>checked regular fit shirt</h2></a>
 					</div>
 		</section>
 		<!-- Footer Section -->
 		<div class="footer__container"></div>
 	</div>
-
 </body>
 </html>

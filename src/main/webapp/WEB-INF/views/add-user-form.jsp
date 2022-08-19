@@ -7,87 +7,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add User name</title>
-<style type="text/css">
-body {
-
-h1 {
-	backgroundcolor: #FFE4C4;
-}
-label {
-	backgroundcolor: #FFE4C4;
-	font-size: 1.3em;
-	display: flex;
-	margin: 5px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
-}
-#userId {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#phoneNumber {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#email {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#phoneNo {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#email {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#password {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#address {
-	width: 280px;
-	height: 40px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-	}
-	
-#userName {
-	width: 280px;
-	height: 40px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-	}
-#log {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 14px;
-	padding-left: 10px;
-	color: blue;
-}
-
+<style>
+<%@include file="/WEB-INF/views/css/add-user-form.css"%>
 </style>
 </head>
 <body>

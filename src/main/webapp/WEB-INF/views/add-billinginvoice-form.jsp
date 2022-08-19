@@ -6,83 +6,14 @@
 <head lang="en">
 <meta charset="ISO-8859-1">
 <title>Add Bill Invoice</title>
-<style type="text/css">
-body {
-	background-image:
-		url("file:///C:/Users/hari3105/Downloads/istockphoto-1181376840-612x612.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-
-h1 {
-	backgroundcolor: #FFE4C4;
-}
-label {
-	backgroundcolor: #FFE4C4;
-	font-size: 1.3em;
-	display: flex;
-	margin: 5px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
-}
-#userId {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#productId {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#quantity {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#rate {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#billAmount {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#modeOfPayment {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#billDate {
-	width: 280px;
-	height: 40px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-	}
-
+<style>
+<%@include file="/WEB-INF/views/css/add-billinginvoice-form.css"%>
 </style>
 </head>
-<body>
-	<h1 align="center">Add Bill Invoice</h1>
+<body style="text-align:center">
+<div class="box">
+	<h1>Bill Invoice</h1>
 		<div id="root">
-		<div id="form" align="center">
-		
 			<form:form action="addbillinvoice" method="post"
 				modelAttribute="addbilldetail">
 				<div>
@@ -101,26 +32,30 @@ label {
 					<label for="quantity">Quantity</label>
 				</div>
 				<div>
-					<form:input path="quantity" />
+					<form:input path="quantity" onchange="amountCalculate()"/>
 				</div>
 				<div>
 					<label for=rate>Rate</label>
 				</div>
 				<div>
-					<form:input path="rate" />
+					<form:input path="rate" onchange="amountCalculate()"/>
 				</div>
 				<div>
 					<label for="billAmount">Bill Amount</label>
 				</div>
 				<div>
-					<form:input path="billAmount" />
+					<form:input path="billAmount" onchange="amountCalculate(this.form)"/>
 				</div>
 				<div>
 					<label for="modeOfPayment">Mode of Payment</label>
-				</div>
-				<div>
-					<form:input path="modeOfPayment" />
-				</div>
+                    </div>
+                        <form:select path="modeOfPayment">
+                            <form:errors path="modeOfPayment" />
+                            <form:option value="Credit card">CREDIT CARD</form:option>
+                            <form:option value="Upi">UPI</form:option>
+                            <form:option value="NetBanking">NETBANKING</form:option>
+                        </form:select>
+  <br>
 				<div>
 					<label for="billDate">Bill Date</label>
 				</div>
@@ -128,9 +63,19 @@ label {
 					<form:input path="billDate" type="date"/>
 				</div>
 
-				<form:button>Add New</form:button>
+				<form:button>Proceed to pay</form:button>
 			</form:form>
 		</div>
 	</div>
+	<script type="text/javascript">
+    function amountCalculate() {
+        var quantity = document.getElementById("quantity").value;
+        var rate = document.getElementById("rate").value;
+        var billAmount = parseInt(quantity) * parseInt(rate);
+
+        document.getElementById("billAmount").value = billAmount;
+        return billAmount;
+    }
+</script>
 </body>
 </html>

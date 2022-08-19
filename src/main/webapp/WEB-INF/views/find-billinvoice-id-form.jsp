@@ -59,8 +59,6 @@
 						<form:input path="billDate" type="date"/>
 					</div>
 				</div>
-				
-	          </label>
 				</div>
 			</form:form>
 		</div>

@@ -7,95 +7,58 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Sign up</title>
-<style type="text/css">
-body {
-	background-image:
-		url("https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA0fHxmYXNoaW9uJTIwYWVzdGhldGljfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-}
-
-h1 {
-	color: #8B4513;;
-}
-
-label {
-	color: #2F4F4F;
-	font-size: 1.3em;
-	display: flex;
-	margin: 5px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
-}
-
-#userName {
-	width: 250px;
-	height: 30px;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-
-#password {
-	width: 250px;
-	height: 30px;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-
-#phoneNumber {
-	width: 250px;
-	height: 30px;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-
-#email {
-	width: 250px;
-	height: 30px;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-
-#userId {
-	width: 250px;
-	height: 30px;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-
-#email {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 14px;
-	padding-left: 10px;
-	color: blue;
-}
-
-.box {
-	width: 400px;
-	height: 490px;
-	overflow: hidden;
-	border-radius: 10px;
-	box-shadow: 5px 20px 50px #000;
-	margin: auto;
-	padding: 10px;
-	text-align: center;
-	background-color: #00000;
-}
+<style>
+<%@include file="/WEB-INF/views/css/register.css"%>
 </style>
+<!-- <script type="text/javascript">
+	var 
+	userNameCheck = function() {
+		var nameRegex = new RegExp("^[a-zA-Z]+$");
+		if (!document.myForm.customerName.value.match(nameRegex)) {
+			if (alert("Name can't be empty or must contain only alphabets")) {
+				document.myForm.customerName.focus();
+			} else
+				document.activeElement.blur();
+		} else {
+			return false;
+		}
+
+	}
+
+	var emailNameCheck = function() {
+		var rg = new RegExp(
+				"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$");
+		if (!document.myForm.email.value.match(rg)) {
+			if (alert("Email not valid")) {
+				document.myForm.email.focus();
+			} else
+				document.activeElement.blur();
+		} else {
+			return false;
+		}
+	}
+	var addressCheck = function() {
+		if (document.myForm.address.value == "") {
+			if (alert("Address cannot be blank")) {
+				document.myForm.address.focus();
+			} else
+				document.activeElement.blur();
+		} else {
+			return false;
+		}
+	}
+</script> -->
 <body>
 	<h1 align="center">Sign Up</h1>
 	<div id="root" class="box">
 		<div id="form">
-			<form:form action="register" method="post" modelAttribute="users">
+			<form:form action="register" method="post" modelAttribute="users"
+             name="myForm">
 				<div>
 					<label for="userName">User Name</label>
 					<div>
-						<form:input path="userName"
-							title="should contain Only alphanumeric characters, underscore and dot.^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)*$" />
+						<form:input path="userName"/>
+
 					</div>
 				</div>
 				<div>
@@ -113,31 +76,30 @@ label {
 				<div>
 					<label for="email">Email</label>
 					<div>
-						<form:input path="email" title="Email can't be empty"
-							pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" required="true" />
+						<form:input path="email" id="email" name="email"
+							onblur="emailNameCheck();" placeholder="e.g example@gmail.com"
+							pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$"
+							title="Enter valid email ex: example@gmail.com" required="true" />
 					</div>
 				</div>
-				<div>
-					<label for="address">Address</label>
-					<div>
-						<form:input path="address" title="address can't be empty"/>
-					</div>
-				</div>
-				<div>
-					<label for="role">Role</label>
-					<div>
-						<td><form:select path="role">
-								<form:option value="user">User</form:option>
-							</form:select></td>
-					</div>
-				</div>
-				<br>
-				<form:button id="log">Sign Up</form:button>
-			</form:form>
 		</div>
-	</div>
-
-
-
+		<div>
+			<label for="address">Address</label>
+			<div>
+				<form:input path="address" id="address" name="address" onblur="addressCheck();" placeholder="Enter address" required="true"/>
+					</div>/>
+			</div>
+		</div>
+		<div>
+			<label for="role">Role</label>
+			<div>
+				<form:select path="role">
+						<form:option value="user">User</form:option>
+					</form:select></td>
+		<br>
+		<form:button id="log">Sign Up</form:button>
+		</form:form>
+		</div>
+		</div>
 </body>
 </html>

@@ -7,77 +7,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login Here</title>
-<style type="text/css">
-body {
-	background: #456;
-	background-image:
-		url('https://images.unsplash.com/photo-1603400521630-9f2de124b33b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mzd8Mzc2MzY4MDN8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-}
-
-h1 {
-	text-align: center;
-	color: #BA4A00;
-}
-
-label {
-	color: #BA4A00;
-	font-size: 1.3em;
-	display: flex;
-	margin: 5px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
-}
-
-#userName {
-	width: 250px;
-	height: 30px;
-	border-color: black;
-	border-radius: 3px;
-	padding-left: 8px;
-	border-radius: 5px;
-}
-
-#password {
-	width: 250px;
-	height: 30px;
-	border-color: black;
-	border-radius: 3px;
-	padding-left: 8px;
-	border-radius: 5px;
-}
-
-#role {
-	width: 250px;
-	height: 30px;
-	border-color: black;
-	border-radius: 14px;
-	padding-left: 10px;
-	color: blue;
-}
-
-#log {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 14px;
-	padding-left: 10px;
-	color: blue;
-}
-
-.box {
-	width: 400px;
-	height: 490px;
-	overflow: hidden;
-	border-radius: 10px;
-	box-shadow: 5px 20px 50px #000;
-	margin: auto;
-	padding: 10px;
-	text-align: center;
-}
+<style>
+<%@include file="/WEB-INF/views/css/login-form.css"%>
 </style>
 <script type="text/javascript">
 var userNameCheck = function() {

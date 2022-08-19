@@ -12,7 +12,8 @@ public interface CategoryRepository extends JpaRepository<Category,Integer> {
 	
     Category findByCategoryNo(int id);
     
-    Category save( Category category);
+    @SuppressWarnings("unchecked")
+	Category save( Category category);
     
     void deleteById(int id);
 

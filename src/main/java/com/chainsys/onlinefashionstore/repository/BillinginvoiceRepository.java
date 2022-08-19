@@ -11,6 +11,7 @@ public interface BillinginvoiceRepository extends JpaRepository<BillingInvoice,L
 
 	BillingInvoice findById(long id);
 
+	@SuppressWarnings("unchecked")
 	BillingInvoice save(BillingInvoice billingInvoice);
 
 	BillingInvoice deleteById(long id);

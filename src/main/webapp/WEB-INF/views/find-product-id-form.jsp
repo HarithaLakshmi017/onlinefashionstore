@@ -48,7 +48,7 @@
 						<form:input path="productImage" />
 					</div>
 				</div>
-				<button><a href= "/addbillinvoiceform">Buy Now</a></button>
+				<a href= "/addbillinvoiceform?id=${productid}"><button>Buy Now</button></a>
 				</form:form>
 		</div>
 	</div>

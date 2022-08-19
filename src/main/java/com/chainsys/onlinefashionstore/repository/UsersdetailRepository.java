@@ -13,6 +13,7 @@ public interface UsersdetailRepository extends JpaRepository<Usersdetail, Intege
 	
 	Usersdetail findById(int id);
 
+	@SuppressWarnings("unchecked")
 	Usersdetail save(Usersdetail usersdetail);
 
 	// use for adding a new user

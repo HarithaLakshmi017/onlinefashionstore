@@ -21,7 +21,7 @@ th, td {
 }
 
 th, td {
-	color: white;
+	color: black;
 }
 
 body {

@@ -1,0 +1,91 @@
+@charset "ISO-8859-1";
+
+body {
+	background: #456;
+	background-image:
+		url('https://media.istockphoto.com/photos/pink-dots-on-dark-wall-picture-id174636490?k=20&m=174636490&s=170667a&w=0&h=znAt6PQgow8QXG9wh70YkgZB-Z6upT5CqQ0dkkA_cRg=');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+
+h1 {
+	color: #ff9999;
+	text-align: center;
+}
+
+label {
+	color: #ff9999;
+	font-size: 1.3em;
+	display: flex;
+	margin: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+#productName {
+	width: 250px;
+	height: 30px;
+	border-color: black;
+	border-radius: 3px;
+	padding-left: 8px;
+	border-radius: 5px;
+}
+
+#rate {
+	width: 250px;
+	height: 30px;
+	border-color: black;
+	border-radius: 3px;
+	padding-left: 8px;
+	border-radius: 5px;
+}
+
+#categoryNo {
+	width: 250px;
+	height: 30px;
+	border-color: black;
+	border-radius: 3px;
+	padding-left: 8px;
+	border-radius: 5px;
+	color: blue;
+}
+
+#rate {
+	width: 250px;
+	height: 30px;
+	border-color: black;
+	border-radius: 3px;
+	padding-left: 8px;
+	border-radius: 5px;
+}
+
+#stockInhand {
+	width: 250px;
+	height: 30px;
+	border-color: black;
+	border-radius: 3px;
+	padding-left: 8px;
+	border-radius: 5px;
+}
+
+#productDescription {
+	width: 250px;
+	height: 30px;
+	border-color: black;
+	border-radius: 3px;
+	padding-left: 8px;
+	border-radius: 5px;
+}
+
+.box {
+	width: 400px;
+	height: 490px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+	margin: auto;
+	padding: 10px;
+	text-align: center;
+}

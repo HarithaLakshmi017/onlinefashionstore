@@ -7,15 +7,11 @@ import org.springframework.stereotype.Service;
 
 import com.chainsys.onlinefashionstore.model.Category;
 import com.chainsys.onlinefashionstore.repository.CategoryRepository;
-import com.chainsys.onlinefashionstore.repository.ProductRepository;
 
 @Service
 public class CategoryService {
 	@Autowired
 	private CategoryRepository catrepository;
-	@Autowired
-	private ProductRepository productrepository;
-
 
 	public List<Category> getCategory() {
 		List<Category> categorylist = catrepository.findAll();

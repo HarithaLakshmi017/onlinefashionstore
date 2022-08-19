@@ -1,0 +1,94 @@
+@charset "ISO-8859-1";
+
+body {
+	background: #456;
+	background-image:
+		url('');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+
+h1 {
+	backgroundcolor: #FFE4C4;
+	text-align: center;
+	
+}
+label {
+	backgroundcolor: #FFE4C4;
+	font-size: 1.3em;
+	display: flex;
+	margin: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+#userId {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#productId {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#quantity {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#rate {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#billAmount {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#modeOfPayment {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#billDate {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+.box {
+	width: 400px;
+	height: 700px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+	margin: auto;
+	padding: 10px;
+	text-align: center;
+}
+#button{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

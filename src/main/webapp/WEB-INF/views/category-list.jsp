@@ -7,39 +7,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>List-Category</title>
-<style type="text/css">
-table, tb {
-	width: 50%;
-	padding: 15px;
-	text-align: left;
-}
-
-th, td {
-	border: solid 1px #777;
-	padding: 10px;
-	border-color: #cc0033;
-}
-
-td {
-	color: #000000;
-}
-
-tr {
-	color: white;
-}
-
-body {
-	background-image: url('');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-}
+<style>
+<%@include file="/WEB-INF/views/css/category-list.css"%>
 </style>
 </head>
 <div id="table root">
-	       
-	<table align="center">
-
+<table>
 		<thead>
 			<tr>
 

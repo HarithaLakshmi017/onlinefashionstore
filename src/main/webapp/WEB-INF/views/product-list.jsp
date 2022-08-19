@@ -6,6 +6,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>List-Product</title>
+<style>
+<%@include file="/WEB-INF/views/css/product-list.css"%>
+</style>
 </head>
 <h1 align="center">Product List</h1>
 <div id="table root">

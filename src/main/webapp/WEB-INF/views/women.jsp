@@ -92,7 +92,6 @@
 
 .button:hover {
 	background: gold;
-	color: #fff;
 	transition: all 0.3s ease;
 }
 
@@ -622,7 +621,7 @@ nav .menu {
 }
 
 .img {
-	background: url('img3.jpg') no-repeat;
+	background: url('') no-repeat;
 	width: 100%;
 	height: 100vh;
 	background-size: cover;
@@ -680,7 +679,7 @@ nav .menu {
 }
 
 .center .btns button:first-child {
-	color: #fff;
+	color: #141414;
 	background: none;
 }
 
@@ -734,7 +733,7 @@ nav .menu {
 
 .dropdown-content a {
 	float: none;
-	color: black;
+	color: #fff;
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
@@ -764,9 +763,11 @@ nav .menu {
 				<div class="dropdown">
 					<button class="dropbtn">Category</button>
 					<div class="dropdown-content">
-						<a href="/admin/men">jumpsuits</a> <a href="/admin/women">Sweat
-							Shirts</a> <a href="/admin/women">kurtis</a> <a href="/admin/women">Ripped
-							jean</a> <a href="/admin/women">jackets</a>
+						<a href="/admin/womenjumpsuits">jumpsuits</a>
+						 <a href="/admin/womensweatshirts">SweatShirts</a> 
+							<a href="/admin/womenkurtis">kurtis</a>
+							 <a href="/admin/womenrippedjean">Rippedjean</a> 
+							<a href="/admin/womenjackets">jackets</a>
 					</div>
 				</div>
 			</div>
@@ -789,7 +790,7 @@ nav .menu {
 						<h2></h2>
 					</div>
 					<div class="images__card">
-						<a href="/admin/findproductid?id=101"><h2>Jumpsuits</h2></a>
+						<h2></h2>
 					</div>
 					<div class="images__card">
 						<h2></h2>
