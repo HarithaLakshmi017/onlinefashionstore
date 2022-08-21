@@ -40,8 +40,9 @@
   from {opacity: 0;}
   to {opacity:1 ;}
 }
+
 .box{
-border:19px solid #a7e021;
+border: #DA70D6;
 border-radius: 5px;
 margin-top: 93px;
 height:280px;

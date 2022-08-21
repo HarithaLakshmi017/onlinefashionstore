@@ -33,12 +33,12 @@ var userNameCheck = function() {
 			<div>
 				<label for="userName">User Name </label>
 				<form:input  path="userName"
-					title="enter the valid username" name="userName" id="userName"
+					title="enter the valid username" name="userName" placeholder="enter username" id="userName"
 					onblur="userNameCheck();" />
 			</div>
 			<div>
 				<label for="password">Password</label>
-				<form:input id="password" path="password" type="password"
+				<form:input id="password" path="password" type="password" placeholder="enter password"
 					title="password must begin with letter and contain atleast one number and must have atleast 8 characters"
 					required="true" />
 			</div>

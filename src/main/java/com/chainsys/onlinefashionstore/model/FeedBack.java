@@ -24,8 +24,8 @@ public class FeedBack {
 	@Column(name = "feedback_date")
 	private Date feedbackDate;
 
-	@Column(name = "user_id")
-	private int userId;
+	@Column(name = "EMAIL")
+	private String email;
 
 	public int getFeedbackId() {
 		return feedbackId;
@@ -51,12 +51,12 @@ public class FeedBack {
 		this.feedbackDate = feedbackDate;
 	}
 
-	public int getUserId() {
-		return userId;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }

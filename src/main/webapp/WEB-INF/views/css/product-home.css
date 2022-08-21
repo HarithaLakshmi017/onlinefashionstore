@@ -9,7 +9,7 @@
 
 .navbar {
 	background: #131313;
-	height: 80px;
+	height: 60px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -410,7 +410,7 @@
 
 .navbar_product a {
 	text-decoration: none;
-	color: white;
+	color: #fff;
 	margin: 50px;
 }
 
@@ -691,4 +691,25 @@ nav .menu {
 
 .dropdown:hover .dropdown-content {
 	display: block;
+}
+
+.button1{
+    position: absolute;
+    top: -90px;
+    left: 0px;
+    font-size: 18px;
+    color: #DA70D6;
+}
+.button3 {
+	position: absolute;
+    top: -480px;
+    right: 16px;
+    font-size: 20px;
+    color: #DA70D6;
+    margin-top:505px;
+    background-color: rgb(0, 0, 0);
+    margin-right: 2px;
+    border-radius: 10px;
+    height: 41px;
+    width: 38px;
 }

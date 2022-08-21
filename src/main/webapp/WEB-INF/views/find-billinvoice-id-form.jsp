@@ -13,9 +13,9 @@
         <div id="form">
             <form:form action="" method="post" modelAttribute="findById">
               <div>
-					<label for="userId">User Id</label>
+					<label for="userEmail">User Email</label>
 					<div>
-						<form:input path="userId" />
+						<form:input path="userEmail" />
 					</div>
 				</div>
 				<div>

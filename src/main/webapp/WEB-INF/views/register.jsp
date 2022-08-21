@@ -89,16 +89,16 @@
 				<form:input path="address" id="address" name="address" onblur="addressCheck();" placeholder="Enter address" required="true"/>
 					</div>/>
 			</div>
-		</div>
-		<div>
-			<label for="role">Role</label>
+					<label for="role">Role</label>
 			<div>
 				<form:select path="role">
 						<form:option value="user">User</form:option>
 					</form:select></td>
 		<br>
-		<form:button id="log">Sign Up</form:button>
+		</div>
+		<div>
 		</form:form>
+		<a href="/admin/login-form"><button class="button button4">Sign Up</button></a>
 		</div>
 		</div>
 </body>

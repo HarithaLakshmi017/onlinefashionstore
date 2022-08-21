@@ -426,14 +426,14 @@
 
 .images__card h2 {
 	position: absolute;
-	top: 350px;
+	top: 150px;
 	left: 30px;
 	font-size: 1.2rem;
 }
 
 .images__card p {
 	position: absolute;
-	top: 380px;
+	top: 280px;
 	left: 30px;
 	font-size: 0.8rem;
 }
@@ -707,7 +707,7 @@ nav .menu {
 	top: -90px;
 	left: 0px;
 	font-size: 18px;
-	color: red;
+	color: #DA70D6;
 }
 
 .dropdown {
@@ -757,7 +757,22 @@ nav .menu {
 .dropdown:hover .dropdown-content {
 	display: block;
 }
+
 a{
  text-decoration: none;
- color: #fff
+ color: white;
  }
+ 
+ .button3 {
+	position: absolute;
+    top: -480px;
+    right: 16px;
+    font-size: 20px;
+    color: #DA70D6;
+    margin-top:505px;
+    background-color: rgb(0, 0, 0);
+    margin-right: 2px;
+    border-radius: 10px;
+    height: 41px;
+    width: 38px;
+}

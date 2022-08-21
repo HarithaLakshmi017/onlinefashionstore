@@ -7,51 +7,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Update Product</title>
-<style type="text/css">
-body {
-
-h1 {
-	backgroundcolor: #FFE4C4;
-}
-label {
-	backgroundcolor: #FFE4C4;
-	font-size: 1.3em;
-	display: flex;
-	margin: 5px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
-}
-#userId {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#email {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#feedbackDate {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#feedback {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-
-}
-
+<style>
+<%@include file="/WEB-INF/views/css/update-category-form.css"%>
 </style>
 </head>
 <body>
@@ -59,9 +16,9 @@ label {
 		<div id="form">
 			<form:form action="updatefb" method="post" modelAttribute="updatefeedback">
 				<div>
-					<label for="emailId">Email Id</label>
+					<label for="email">Email Id</label>
 					<div>
-						<form:input path="emailId" />
+						<form:input path="email" />
 					</div>
 				</div>
 				<div>
@@ -77,16 +34,8 @@ label {
 					</div>
 				</div>
 				<div>
-					<label for="userId">User Id</label>
-					<div>
-						<form:input path="userId" />
-					</div>
-				</div>
-				
-				<div>
 					<form:button>Update FeedBack</form:button>
 				</div>
 			</form:form>
-
 </body>
 </html>

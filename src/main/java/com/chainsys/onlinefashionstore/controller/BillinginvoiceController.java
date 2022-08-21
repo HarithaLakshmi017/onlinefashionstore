@@ -40,8 +40,10 @@ public class BillinginvoiceController {
 	@GetMapping("/addbillinvoiceform")
 	public String showAddForm(@RequestParam("id") long id,Model model) {
 		BillingInvoice billinvoicelist = new BillingInvoice();
+		Product pro = productservice.findById(id);
 		model.addAttribute("addbilldetail", billinvoicelist);
 		billinvoicelist.setProductId(id);
+		billinvoicelist.setRate(pro.getRate());
 		return "add-billinginvoice-form";
 	}
 

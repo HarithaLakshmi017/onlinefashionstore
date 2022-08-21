@@ -7,79 +7,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Update BillInvoice</title>
-<style type="text/css">
-body {
-
-h1 {
-	backgroundcolor: #FFE4C4;
-}
-label {
-	backgroundcolor: #FFE4C4;
-	font-size: 1.3em;
-	display: flex;
-	margin: 5px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
-}
-#userId {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#productId {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#quantity {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#rate {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#billAmount {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#modeOfPayment {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#billDate {
-	width: 280px;
-	height: 40px;
-	border: none;
-	border-radius: 3px;
-	padding-left: 8px;
-	}
-#log {
-	width: 250px;
-	height: 30px;
-	border: none;
-	border-radius: 14px;
-	padding-left: 10px;
-	color: blue;
-}
-
+<style>
+<%@include file="/WEB-INF/views/css/update-billinvoice-form.css"%>
 </style>
 </head>
 <body>
@@ -87,9 +16,9 @@ label {
 		<div id="form">
 			<form:form action="updatebill" method="post" modelAttribute="updatebilling">
 				<div>
-					<label for="userId">User Id</label>
+					<label for="userEmail">User Email</label>
 					<div>
-						<form:input path="userId" />
+						<form:input path="userEmail" />
 					</div>
 				</div>
 				<div>

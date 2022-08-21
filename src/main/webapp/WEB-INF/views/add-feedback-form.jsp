@@ -10,7 +10,8 @@
 <%@include file="/WEB-INF/views/css/add-feedback-form.css"%>
 </style>
 </head>
-<body>
+<body style="text-align:center">
+<div class="box">
 	<h1>Add a FeedBack</h1>
 	<div id="table root">
 		<div id="form">
@@ -18,16 +19,22 @@
 			<form:form action="addfb" method="post"
 				modelAttribute="addfeedback">
 				<div>
-					<label for="userId">User Id</label>
+					<label for="email">Email</label>
 				</div>
 				<div>
-					<form:input path="userId" />
+					<form:input path="email" />
 				</div>
 				<div>
 					<label for="feedback">FeedBack</label>
 				</div>
 				<div>
 					<form:input path="feedback" />
+				</div>
+					<div>
+					<label for="feedbackId">Feedback Id</label>
+				</div>
+				<div>
+					<form:input path="feedbackId" type="hidden"/>
 				</div>
 				<div>
 					<label for="feedbackDate">FeedBack Date</label>
@@ -36,9 +43,10 @@
 					<form:input path="feedbackDate" type="date"/>
 				</div>
 
-				<form:button>Add FeedBack</form:button>
+				<a> <href="/admin/feedbacksuccess"><button class="button button4">Add Feedback</button></a>
 			</form:form>
 		</div>
+	</div>
 	</div>
 </body>
 </html>

@@ -86,7 +86,7 @@
                     <tr>
 
 					<td>${listbillinvoice.billingId}</td>
-					<td>${listbillinvoice.userId}</td>
+					<td>${listbillinvoice.userEmail}</td>
 					<td>${listbillinvoice.productId}</td>
 					<td>${listbillinvoice.quantity}</td>
 					<td>${listbillinvoice.rate}</td>

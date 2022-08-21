@@ -110,13 +110,6 @@ public class AdminController {
 		return "update-product-form";
 	}
 
-	@PostMapping("/updateproduct")
-	public String updateProduct(@ModelAttribute("updateproduct") Product pro) {
-		productService.save(pro);
-		long id = pro.getProductId();
-		return "redirect:/addbillinvoiceform?id=" + id;
-	}
-
 	@GetMapping("/deleteproduct")
 	public String deleteProduct(@RequestParam("id") int id) {
 		productService.deleteById(id);
@@ -216,5 +209,9 @@ public class AdminController {
 	@GetMapping("/womensweatshirts")
 	public String womensweatshirts(Model model) {
 		return "womensweatshirts";
+	}
+	@GetMapping("/feedbacksuccess")
+	public String feedbacksuccess(Model model) {
+		return "feedbacksuccess";
 	}
 	}

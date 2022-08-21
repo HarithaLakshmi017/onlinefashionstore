@@ -39,11 +39,11 @@ body {
 	<table>
 		<thead>
 			<tr>
-
-				<th>FeedBack Id</th>
-				<th>User Id</th>
+                <th>feedbackId</th>
+				<th>Email</th>
 				<th>FeedBack</th>
 				<th>FeedBack Date</th>
+				<th>update</th>
 
 			</tr>
 
@@ -55,7 +55,7 @@ body {
                     <tr>
 
 					<td>${feedbacklist.feedbackId}</td>
-					<td>${feedbacklist.userId}</td>
+					<td>${feedbacklist.email}</td>
 					<td>${feedbacklist.feedback}</td>
 					<td>${feedbacklist.feedbackDate}</td>
 					<td><a

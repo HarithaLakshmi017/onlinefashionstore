@@ -17,8 +17,8 @@ import javax.persistence.Table;
 public class BillingInvoice {
 	
 	
-	@Column(name = "USER_ID")
-	private int userId;
+	@Column(name = "USER_EMAIL")
+	private String userEmail;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO,generator="BILLING_ID_REF")
     @SequenceGenerator(name="BILLING_ID_REF",sequenceName ="BILLING_ID_REF",allocationSize = 1)
@@ -38,20 +38,20 @@ public class BillingInvoice {
 	@Column(name = "BILL_DATE")
 	private Date billDate;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name = "USER_ID", nullable = false, updatable = false, insertable = false)
-	private Usersdetail usersdetail;
+//	@ManyToOne(fetch=FetchType.LAZY)
+//	@JoinColumn(name = "USER_ID", nullable = false, updatable = false, insertable = false)
+//	private Usersdetail usersdetail;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name= "PRODUCT_ID", nullable = false, updatable = false, insertable = false)
 	private Product product;
 
-	public int getUserId() {
-		return userId;
+	public String getUserEmail() {
+		return userEmail;
 	}
 
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
 	}
 
 	public long getBillingId() {
@@ -110,13 +110,13 @@ public class BillingInvoice {
 		this.billDate = billDate;
 	}
 
-	public Usersdetail getUsersdetail() {
-		return usersdetail;
-	}
-
-	public void setUsersdetail(Usersdetail usersdetail) {
-		this.usersdetail = usersdetail;
-	}
+//	public Usersdetail getUsersdetail() {
+//		return usersdetail;
+//	}
+//
+//	public void setUsersdetail(Usersdetail usersdetail) {
+//		this.usersdetail = usersdetail;
+//	}
 
 	public Product getProduct() {
 		return product;

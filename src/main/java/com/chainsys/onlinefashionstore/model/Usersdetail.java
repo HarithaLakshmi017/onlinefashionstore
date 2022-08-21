@@ -1,15 +1,10 @@
 package com.chainsys.onlinefashionstore.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -41,8 +36,8 @@ public class Usersdetail {
 
 	@Column(name = "USER_NAME")
 	private String userName;
-	@OneToMany(mappedBy = "usersdetail", fetch = FetchType.LAZY)
-	List<BillingInvoice> billingInvoices = new ArrayList<>();
+//	@OneToMany(mappedBy = "usersdetail", fetch = FetchType.LAZY)
+//	List<BillingInvoice> billingInvoices = new ArrayList<>();
 
 	public int getUserId() {
 		return userId;
@@ -100,12 +95,12 @@ public class Usersdetail {
 		this.userName = userName;
 	}
 
-	public List<BillingInvoice> getBillingInvoices() {
-		return billingInvoices;
-	}
-
-	public void setBillingInvoices(List<BillingInvoice> billingInvoices) {
-		this.billingInvoices = billingInvoices;
-	}
+//	public List<BillingInvoice> getBillingInvoices() {
+//		return billingInvoices;
+//	}
+//
+//	public void setBillingInvoices(List<BillingInvoice> billingInvoices) {
+//		this.billingInvoices = billingInvoices;
+//	}
 
 }

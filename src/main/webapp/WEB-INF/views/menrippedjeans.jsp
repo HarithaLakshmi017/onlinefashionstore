@@ -5,15 +5,19 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Fashionista</title>
-<style type="text/css">
+<link href='https://css.gg/arrow-left-r.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
 <%@include file="/WEB-INF/views/css/menrippedjeans.css"%>
 </style>
 </head>
 <body>
 	<nav>
 		<a href="/admin/product">
-			<button class="button1">Back</button>
+			<button class="button1"><em class="gg-arrow-left-r"></em></button>
 		</a> <br />
+		 <a href="/home/index">
+	<button class="button3"><i class="fa fa-home"></i></button></a>
 		<div class="menu">
 			<div class="logo">
 				<a href="#">Mens fashion</a>

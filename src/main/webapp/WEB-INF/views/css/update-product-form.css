@@ -1,19 +1,19 @@
 @charset "ISO-8859-1";
 
 body {
+	background: #DA70D6;
 	background-image:
-		url('https://images.pexels.com/photos/1266139/pexels-photo-1266139.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+		url('https://images.unsplash.com/photo-1530714457710-6bf1899c1d32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
 }
 
 h1 {
-	color: #DA70D6;
+	backgroundcolor: #FFE4C4;
 }
-
 label {
-	color: #fff;
+	backgroundcolor: #FFE4C4;
 	font-size: 1.3em;
 	display: flex;
 	margin: 5px;
@@ -21,57 +21,41 @@ label {
 	cursor: pointer;
 	transition: .5s ease-in-out;
 }
-
-#userName {
-	width: 250px;
-	height: 30px;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-
-#password {
-	width: 250px;
-	height: 30px;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-
-#phoneNumber {
-	width: 250px;
-	height: 30px;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-
-#email {
-	width: 250px;
-	height: 30px;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-
-#userId {
-	width: 250px;
-	height: 30px;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-
-#role {
-	width: 250px;
-	height: 30px;
-	border-radius: 3px;
-	padding-left: 8px;
-}
-#address {
+#productName {
 	width: 250px;
 	height: 30px;
 	border: none;
 	border-radius: 3px;
-	padding-left: 10px;
-	color: blue;
+	padding-left: 8px;
 }
-
+#rate {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#categoryNo {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#stockInhand {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
+#productDescription {
+	width: 250px;
+	height: 30px;
+	border: none;
+	border-radius: 3px;
+	padding-left: 8px;
+}
 .box {
 	width: 400px;
 	height: 490px;
@@ -81,9 +65,7 @@ label {
 	margin: auto;
 	padding: 10px;
 	text-align: center;
-	background-color: #0000;
 }
-
 .button {
   background-color: #DA70D6;
   border: none;

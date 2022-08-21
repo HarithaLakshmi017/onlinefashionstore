@@ -17,7 +17,7 @@
 		<thead>
 			<tr>
 
-				<th>User Id</th>
+				<th>User Email</th>
 				<th>Product Id</th>
 				<th>Quantity</th>
 				<th>Rate</th>
@@ -33,17 +33,17 @@
 			<c:forEach var="listbillinvoice" items="${allbillinvoice}">
                     <tr>
 
-					<td>${listbillinvoice.userId}</td>
+					<td>${listbillinvoice.userEmail}</td>
+					<td>${listbillinvoice.billingId}</td>
 					<td>${listbillinvoice.productId}</td>
 					<td>${listbillinvoice.quantity}</td>
 					<td>${listbillinvoice.rate}</td>
 					<td>${listbillinvoice.billAmount}</td>
 					<td>${listbillinvoice.modeOfPayment}</td>
-					<td>${listbillinvoice.billingId}</td>
 					<td>${listbillinvoice.billDate}</td>
-                 <td><a href="updatebillinvoiceform?Id=${listbillinvoice.userId}"><input
+                 <td><a href="updatebillinvoiceform?Id=${listbillinvoice.userEmail}"><input
                             onclick="change()" type="button" value="Update" id="myButton1"></input></a></td>
-                    <td><a href="deletebillinvoice?Id=${listbillinvoice.userId}"><input
+                    <td><a href="deletebillinvoice?Id=${listbillinvoice.userEmail}"><input
                             onclick="change()" type="button" value="Delete" id="myButton2"></input></a></td>
 				</tr>
                 </c:forEach>

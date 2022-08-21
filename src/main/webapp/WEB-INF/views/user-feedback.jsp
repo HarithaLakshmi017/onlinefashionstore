@@ -78,8 +78,7 @@
 
 			<c:forEach var="listfeedback" items="${getfeedback}">
                     <tr>
-
-					<td>${listfeedback.userId}</td>
+                     <td>${listfeedback.email}</td>
 					<td>${listfeedback.feedback}</td>
 					<td>${listfeedback.feedbackDate}</td>
 					<td>${listfeedback.feedbackId}</td>

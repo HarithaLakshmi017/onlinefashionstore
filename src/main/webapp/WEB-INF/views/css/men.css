@@ -9,7 +9,7 @@
 
 .navbar {
 	background: #131313;
-	height: 80px;
+	height: 40px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -691,7 +691,7 @@ nav .menu {
     top: -90px;
     left: 0px;
     font-size: 18px;
-    color:red;
+    color:#DA70D6;
 }
 .dropdown {
     float: left;
@@ -739,4 +739,23 @@ nav .menu {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+a{
+ text-decoration: none;
+ color: white;
+ }
+
+.button3 {
+	position: absolute;
+    top: -480px;
+    right: 16px;
+    font-size: 20px;
+    color: #DA70D6;
+    margin-top:505px;
+    background-color: rgb(0, 0, 0);
+    margin-right: 2px;
+    border-radius: 10px;
+    height: 41px;
+    width: 38px;
 }

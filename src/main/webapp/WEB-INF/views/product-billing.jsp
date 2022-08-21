@@ -63,7 +63,7 @@
 		<table border="2" align="center">
 			<thead>
 				<tr>
-					<th>User Id</th>
+					<th>User Email</th>
 					<th>Billing Id</th>
 					<th>Product Id</th>
 					<th>Quantity</th>
@@ -75,7 +75,7 @@
 			<tbody>
 				<c:forEach var="billingdetail" items="${getbilling}">
 					<tr>
-						<td>${billingdetail.userId}</td>
+						<td>${billingdetail.userEmail}</td>
 						<td>${billingdetail.billingId}</td>
 						<td>${billingdetail.productId}</td>
 						<td>${billingdetail.quantity}</td>
