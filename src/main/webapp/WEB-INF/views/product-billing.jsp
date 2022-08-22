@@ -60,7 +60,8 @@
 	</div>
 	<br>
 	<div id="table root">
-		<table border="2" align="center">
+		<table>
+		<caption></caption>
 			<thead>
 				<tr>
 					<th>User Email</th>

@@ -49,7 +49,7 @@
 	}
 </script> -->
 <body>
-	<h1 align="center">Sign Up</h1>
+	<h1>Sign Up</h1>
 	<div id="root" class="box">
 		<div id="form">
 			<form:form action="register" method="post" modelAttribute="users"
@@ -82,21 +82,21 @@
 							title="Enter valid email ex: example@gmail.com" required="true" />
 					</div>
 				</div>
-		</div>
 		<div>
 			<label for="address">Address</label>
 			<div>
 				<form:input path="address" id="address" name="address" onblur="addressCheck();" placeholder="Enter address" required="true"/>
 					</div>/>
 			</div>
+			<div>
 					<label for="role">Role</label>
 			<div>
 				<form:select path="role">
 						<form:option value="user">User</form:option>
-					</form:select></td>
-		<br>
+					</form:select>
+					</div>
 		</div>
-		<div>
+		<br>
 		</form:form>
 		<a href="/admin/login-form"><button class="button button4">Sign Up</button></a>
 		</div>
