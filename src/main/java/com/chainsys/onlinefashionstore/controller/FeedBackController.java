@@ -39,7 +39,7 @@ public class FeedBackController {
 	@PostMapping("/addfb")
 	public String addNewUser(@ModelAttribute("addfeedback") FeedBack feedbacklist) {
 		feedbckservice.save(feedbacklist);
-		return "redirect:/feedback/feedbacklist";
+		return "redirect:/admin/feedbacksuccess";
 	}
 
 	@GetMapping("/updatefeedback")

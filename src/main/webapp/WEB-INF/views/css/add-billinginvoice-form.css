@@ -10,12 +10,11 @@ body {
 }
 
 h1 {
-	backgroundcolor: #FFE4C4;
 	text-align: center;
 	
 }
 label {
-	backgroundcolor: #fff;
+	color: #fff;
 	font-size: 1.3em;
 	display: flex;
 	margin: 5px;
@@ -74,11 +73,10 @@ label {
 }
 .box {
 	width: 400px;
-	height: 700px;
+	height: 500px;
 	overflow: hidden;
 	border-radius: 10px;
 	color: #fff;
-	input-text: #28282B;
 	box-shadow: 5px 20px 50px #000;
 	margin: auto;
 	padding: 10px;

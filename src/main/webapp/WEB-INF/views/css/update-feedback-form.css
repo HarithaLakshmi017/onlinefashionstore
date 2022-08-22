@@ -1,10 +1,10 @@
 @charset "ISO-8859-1";
 
 h1 {
-	backgroundcolor: #FFE4C4;
+	text-align: center;
 }
 label {
-	backgroundcolor: #FFE4C4;
+	
 	font-size: 1.3em;
 	display: flex;
 	margin: 5px;
@@ -15,14 +15,12 @@ label {
 #userId {
 	width: 250px;
 	height: 30px;
-	border: none;
 	border-radius: 3px;
 	padding-left: 8px;
 }
 #email {
 	width: 250px;
 	height: 30px;
-	border: none;
 	border-radius: 3px;
 	padding-left: 8px;
 }
@@ -36,7 +34,6 @@ label {
 #feedback {
 	width: 250px;
 	height: 30px;
-	border: none;
 	border-radius: 3px;
 	padding-left: 8px;
 

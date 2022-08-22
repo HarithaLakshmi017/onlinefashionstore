@@ -1,15 +1,19 @@
 @charset "ISO-8859-1";
 
-table, tb {
+table, th {
 	width: 50%;
 	padding: 15px;
 	text-align: left;
 }
 
-th, td {
+th {
 	border: solid 1px #777;
 	padding: 10px;
 	border-color: #cc0033;
+}
+center{
+	float: center;
+	text-align: center;
 }
 
 td {
@@ -25,5 +29,4 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
-	background-repeat: no-repeat;
 }

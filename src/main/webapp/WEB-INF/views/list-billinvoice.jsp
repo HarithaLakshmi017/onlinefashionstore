@@ -3,7 +3,7 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>List-BillInvoice</title>
@@ -13,7 +13,8 @@
 </head>
 <div id="table root">
 	       
-	<table>
+	<table class="center">
+	<caption></caption>
 		<thead>
 			<tr>
 

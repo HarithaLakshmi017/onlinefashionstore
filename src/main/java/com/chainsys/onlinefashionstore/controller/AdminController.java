@@ -27,6 +27,8 @@ public class AdminController {
 	ProductService productService;
 	@Autowired
 	BillinginvoiceService billService;
+	
+	private static final String LIST="redirect:/admin/category-list";
 
 	@GetMapping("/adminhome")
 	public String adminHome() {
@@ -60,7 +62,7 @@ public class AdminController {
 	@PostMapping("/addcat")
 	public String addNewcategory(@ModelAttribute("addcategories") Category category) {
 		categoryService.save(category);
-		return "redirect:/admin/category-list";
+		return LIST;
 	}
 
 	@GetMapping("/updateCategoryform")
@@ -73,13 +75,13 @@ public class AdminController {
 	@PostMapping("/update")
 	public String updateCategory(@ModelAttribute("updateCategory") Category category) {
 		categoryService.save(category);
-		return "redirect:/admin/category-list";
+		return LIST;
 	}
 
 	@GetMapping("/deleteCategory")
 	public String deleteCategory(@RequestParam("categoryNo") int id) {
 		categoryService.deleteById(id);
-		return "redirect:/admin/category-list";
+		return LIST;
 	}
 
 	@GetMapping("/productlist")

@@ -1,6 +1,6 @@
 @charset "ISO-8859-1";
 
-table, tb {
+table {
 	width: 50%;
 	padding: 15px;
 	text-align: left;
@@ -22,5 +22,4 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
-	background-repeat: no-repeat;
 }

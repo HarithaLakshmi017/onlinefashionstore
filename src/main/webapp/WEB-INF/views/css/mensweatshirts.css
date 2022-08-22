@@ -220,7 +220,6 @@
 	font-size: 1rem;
 	padding: 14px 32px;
 	background: #fff;
-	border: none;
 	border-radius: 4px;
 	margin-top: 2rem;
 	cursor: pointer;
@@ -591,56 +590,12 @@ h3 {
 	padding: 30px;
 }
 
-/* category section */
-.tab_col {
-	color: #fff;
-	background-color: #000;
-	padding: 80px;
-	height: 100wh;
-}
-
-.add_cat {
-	margin: 50px;
-	padding: 10px;
-	background-color: #000;
-	border-color: #b8860b;
-	color: #fff;
-}
-
-.text-value {
-	background-color: #141414;
-}
-
-.nft_name {
-	text-align: center;
-	color: #fff;
-	padding: 100px;
-	font-size: 400%;
-}
-
-#text_box {
-	height: 50px;
-	width: 400px;
-	text-align: center;
-	border-radius: 5px;
-	border-color: gold;
-}
-
-#add_cate {
-	margin: 50px;
-	padding: 10px;
-	background-color: #000;
-	border-color: #b8860b;
-	color: #fff;
-	width: 10%;
-}
 /* signup */
 .form-label {
 	color: #fff;
 }
 
-index
-   ::selection {
+index::selection {
 	color: #000;
 	background: #fff;
 }
@@ -744,7 +699,6 @@ nav .menu {
 	height: 55px;
 	width: 170px;
 	border-radius: 5px;
-	border: none;
 	margin: 0 10px;
 	border: 2px solid white;
 	font-size: 20px;
@@ -785,7 +739,6 @@ nav .menu {
 
 .dropdown .dropbtn {
 	font-size: 16px;
-	border: none;
 	outline: none;
 	color: #DA70D6;
 	padding: 14px 16px;

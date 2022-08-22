@@ -77,7 +77,6 @@
 	padding: 10px 20px;
 	height: 100%;
 	width: 100%;
-	border: none;
 	outline: none;
 	border-radius: 4px;
 	background: #fff;
@@ -220,7 +219,6 @@
 	font-size: 1rem;
 	padding: 14px 32px;
 	background: #fff;
-	border: none;
 	border-radius: 4px;
 	margin-top: 2rem;
 	cursor: pointer;
@@ -619,7 +617,6 @@ nav .menu {
 	height: 55px;
 	width: 170px;
 	border-radius: 5px;
-	border: none;
 	margin: 0 10px;
 	border: 2px solid white;
 	font-size: 20px;
@@ -660,7 +657,6 @@ nav .menu {
 
 .dropdown .dropbtn {
 	font-size: 16px;
-	border: none;
 	outline: none;
 	color: #DA70D6;
 	padding: 14px 16px;

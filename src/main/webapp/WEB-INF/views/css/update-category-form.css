@@ -2,10 +2,9 @@
 
 
 h1 {
-	backgroundcolor: #FFE4C4;
+	text-align: center;
 }
 label {
-	backgroundcolor: #FFE4C4;
 	font-size: 1.3em;
 	display: flex;
 	margin: 5px;
@@ -16,14 +15,12 @@ label {
 #categoryNo {
 	width: 250px;
 	height: 30px;
-	border: none;
 	border-radius: 3px;
 	padding-left: 8px;
 }
 #categoryName {
 	width: 250px;
 	height: 30px;
-	border: none;
 	border-radius: 3px;
 	padding-left: 8px;
 }

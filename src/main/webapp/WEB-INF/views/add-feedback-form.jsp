@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Add FeedBack</title>
@@ -31,7 +31,7 @@
 					<form:input path="feedback" />
 				</div>
 					<div>
-					<label for="feedbackId">Feedback Id</label>
+					<label for="feedbackId"></label>
 				</div>
 				<div>
 					<form:input path="feedbackId" type="hidden"/>
@@ -43,7 +43,7 @@
 					<form:input path="feedbackDate" type="date"/>
 				</div>
 
-				<a> <href="/admin/feedbacksuccess"><button class="button button4">Add Feedback</button></a>
+				<button class="button button4">Add Feedback</button>
 			</form:form>
 		</div>
 	</div>
