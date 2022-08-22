@@ -508,7 +508,7 @@ h3 {
 	color: #fff;
 }
 
-index::selection {
+.index::selection {
 	color: #000;
 	background: #fff;
 }
