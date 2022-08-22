@@ -36,21 +36,39 @@
            
      1.Initially we have to login to online fashion store site by using your credentials such as username and password.
 
-    2.Admin Profile - After logged into the site the admin can able to add product, list product,list bill,list feedback
+    2.Admin Profile - After logged into the site the admin can able to add product, list product,list bill,list feedback.
+    
+    3.User Profile -The new User have to sign up to the page and then once logged into the site the user can view Category, view Product, Select Product, View Product Details, Payment Gateway and Add Feedback.
+    
+    9.About us - To know about Fashionista Online fashion store.     
+    
+ # Features
 
-    3.Add Admin - You can able to add the administrator 
+    1. DataBase Connectivity.
+    2. Form validation in frontend level.
+    5. Generating Id automatically.
+    
+ # Programming Language
 
-    4.Add Company - Register the company to the warehouse to manage the products and suppliers.
+    1.Java
 
-    5.Add Products - Add products to the company via their product id and the product category.
+ # Frontend 
 
-    6.Add Suppliers - Add suppliers to the company by registering via their personal data.
+    1. HTML
+    2. CSS
+    3. JSP
+    4. JavaScript
+    5. BootStrap
 
-    7.Add category - Add category name and product id to manage the data.
+ # Backend
 
-    8.Dashboard - To view the entire data of the admin,company,products and the suppliers in the dashboard.
+    1. Spring Boot
+    
 
-    9.About us - To know about feedback or any query to the warehouse admin.                            
+ # Database
+
+    1. Oracle SQL : 21.4.3
+                           
    
  
  

@@ -506,11 +506,10 @@ button {
 h3 {
 	padding: 30px;
 }
-/* signup */
 .form-label {
 	color: #fff;
 }
-index::selection {
+.index::selection {
 	color: #000;
 	background: #fff;
 }

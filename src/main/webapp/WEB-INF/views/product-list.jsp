@@ -12,7 +12,7 @@
 </head>
 <h1>Product List</h1>
 <div id="table root">
-        <table>
+        <table id="alter">
         <caption></caption>
             <thead>
                 <tr>
@@ -23,6 +23,8 @@
                     <th>Price</th>
                     <th>Description</th>
                     <th>Image</th>
+                    <th>update</th>
+                    <th>delete</th>
               </tr>
             </thead>
             <tbody>

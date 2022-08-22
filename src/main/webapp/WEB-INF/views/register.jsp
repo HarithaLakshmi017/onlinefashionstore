@@ -96,9 +96,10 @@
 					</form:select>
 					</div>
 		</div>
-		<br>
+		<button class="button button4">Sign Up</button>	
 		</form:form>
-		<a href="/admin/login-form"><button class="button button4">Sign Up</button></a>
+		<br>	
+		
 		</div>
 		</div>
 </body>
