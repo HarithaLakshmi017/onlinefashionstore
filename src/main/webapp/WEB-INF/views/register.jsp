@@ -10,9 +10,8 @@
 <style>
 <%@include file="/WEB-INF/views/css/register.css"%>
 </style>
-<!-- <script type="text/javascript">
-	var 
-	userNameCheck = function() {
+<script type="text/javascript">
+	var userNameCheck = function() {
 		var nameRegex = new RegExp("^[a-zA-Z]+$");
 		if (!document.myForm.customerName.value.match(nameRegex)) {
 			if (alert("Name can't be empty or must contain only alphabets")) {
@@ -47,7 +46,7 @@
 			return false;
 		}
 	}
-</script> -->
+</script>
 <body>
 	<h1>Sign Up</h1>
 	<div id="root" class="box">
@@ -57,7 +56,7 @@
 				<div>
 					<label for="userName">User Name</label>
 					<div>
-						<form:input path="userName"/>
+						<form:input path="userName" title="enter valid user name" pattern="^[a-zA-Z]+$" onblur="userNameCheck" required="true"/>
 
 					</div>
 				</div>

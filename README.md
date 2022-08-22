@@ -33,7 +33,6 @@
                                  
   #How to use:
         
-           
      1.Initially we have to login to online fashion store site by using your credentials such as username and password.
 
     2.Admin Profile - After logged into the site the admin can able to add product, list product,list bill,list feedback.
@@ -46,6 +45,7 @@
 
     1. DataBase Connectivity.
     2. Form validation in frontend level.
+    4. Form validation in JavaScript level.
     5. Generating Id automatically.
     
  # Programming Language

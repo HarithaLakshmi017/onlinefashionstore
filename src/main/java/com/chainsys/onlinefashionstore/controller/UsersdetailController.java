@@ -92,7 +92,7 @@ public class UsersdetailController {
 	}
 
 	@PostMapping("/checkuserlogin")
-	public String checkingAccess(@ModelAttribute("users") Usersdetail user) {
+	public String checkingAccess(@ModelAttribute("users") Usersdetail user,Model model) {
 		Usersdetail users = usersdetailservice.getUserNameAndPasswordAndRole(user.getUserName(), user.getPassword(),
 				user.getRole());
 		if (users != null) {
@@ -103,7 +103,8 @@ public class UsersdetailController {
 				return "redirect:/admin/product";
 			}
 		} else {
-			return "invalid-user-error";
+			model.addAttribute("result", "Invalid UserName or Password");
+			return "login-form";
 		}
 		
 	}

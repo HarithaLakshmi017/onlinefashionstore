@@ -52,7 +52,10 @@ var userNameCheck = function() {
 				</div>
 			</div>
 			<br>
-			<form:button id="log">Login</form:button>
+			<div class="re">${result}</div>
+                <div>
+                    <form:button id="log">Login</form:button>
+                </div>
 		</form:form>
 	</div>
 </body>
