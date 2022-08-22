@@ -34,6 +34,7 @@
 				<br>
 <div id="table root">
         <table id="root">
+        <caption></caption>
             <thead>
                 <tr>
                     <th>Product Id</th>
