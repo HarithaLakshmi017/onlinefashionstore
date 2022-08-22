@@ -10,9 +10,10 @@
 <%@include file="/WEB-INF/views/css/product-list.css"%>
 </style>
 </head>
-<h1 align="center">Product List</h1>
+<h1>Product List</h1>
 <div id="table root">
-        <table border="2" align="center">
+        <table>
+        <caption></caption>
             <thead>
                 <tr>
                     <th>Product Id</th>

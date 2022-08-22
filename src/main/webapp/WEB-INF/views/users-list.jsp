@@ -13,6 +13,8 @@
 <div id="table root">
 	       
 	<table>
+	<caption>
+	</caption>
 		<thead>
 		<tr>
 

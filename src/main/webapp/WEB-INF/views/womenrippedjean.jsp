@@ -17,7 +17,7 @@
 			<button class="button1"><em class="gg-arrow-left-r"></em></button>
 		</a> <br />
 		 <a href="/home/index">
-	<button class="button3"><i class="fa fa-home"></i></button></a>
+	<button class="button3"><em class="fa fa-home"></em></button></a>
 		<div class="menu">
 			<div class="logo">
 				<a href="#">Womens fashion</a>

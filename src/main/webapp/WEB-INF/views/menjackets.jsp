@@ -17,7 +17,7 @@
 			<button class="button1"><em class="gg-arrow-left-r"></em></button>
 		</a> <br />
 		 <a href="/home/index">
-	<button class="button3"><i class="fa fa-home"></i></button></a>
+	<button class="button3"><em class="fa fa-home"></em></button></a>
 		<div class="menu">
 			<div class="logo">
 				<a href="#">Mens fashion</a>
@@ -36,7 +36,7 @@
 				<h1>Gallery</h1>
 				<div class="images__container">
 					<div class="images__card" onclick=>
-				<a href="/admin/updateProductform?id=139"><h2>Leather Jacket with zipper pockets</h2></a>
+				<a class="h"href="/admin/updateProductform?id=139"><h2>Leather Jacket with zipper pockets</h2></a>
 					</div>
 					<div class="images__card">
 				  <a href="/admin/updateProductform?id=140"><h2>Trucker jacket with flap pockets</h2></a>
@@ -53,10 +53,11 @@
 					<div class="images__card">
 					<a href="/admin/updateProductform?id=145"><h2>Quilted denim jacket</h2></a>
 					</div>
+					</div>
+					</div>
 		</section>
 		<!-- Footer Section -->
 		<div class="footer__container"></div>
 	</div>
-
 </body>
 </html>
