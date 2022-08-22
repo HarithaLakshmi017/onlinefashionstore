@@ -60,7 +60,7 @@ public class AdminController {
 	}
 
 	@PostMapping("/addcat")
-	public String addNewcategory(@ModelAttribute("addcategories") Category category) {
+	public String addNewCategory(@ModelAttribute("addcategories") Category category) {
 		categoryService.save(category);
 		return LIST;
 	}
@@ -73,7 +73,7 @@ public class AdminController {
 	}
 
 	@PostMapping("/update")
-	public String updateCategory(@ModelAttribute("updateCategory") Category category) {
+	public String updateCategorys(@ModelAttribute("updateCategory") Category category) {
 		categoryService.save(category);
 		return LIST;
 	}
