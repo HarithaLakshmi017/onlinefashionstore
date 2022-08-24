@@ -7,11 +7,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Update Product</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 <%@include file="/WEB-INF/views/css/update-product-form.css"%>
 </style>
 </head>
 <body>
+	 <a href="/home/index">
+	<button class="button3"><em class="fa fa-home"></em></button></a>
 <div class="box">
 		<div id="form">
 			<form:form action="" method="post" modelAttribute="updateproduct">

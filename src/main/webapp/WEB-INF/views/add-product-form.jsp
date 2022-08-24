@@ -13,7 +13,7 @@
 </head>
 <body>
 	<h1>Add Product</h1>
-
+ <div id="errormessage">${message}</div>
 	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addproduct">
@@ -48,9 +48,9 @@
 					</div>
 				</div>
 				<div>
-					<label for="productImage">Product Image</label>
+					<label for="productImage"></label>
 					<div>
-						<form:input path="productImage" />
+						<form:input path="productImage" type="hidden"/>
 					</div>
 					</div>
 					<div>

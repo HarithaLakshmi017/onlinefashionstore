@@ -2,9 +2,12 @@ package com.chainsys.onlinefashionstore.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -60,9 +63,19 @@ public class AdminController {
 	}
 
 	@PostMapping("/addcat")
-	public String addNewCategory(@ModelAttribute("addcategories") Category category) {
-		categoryService.save(category);
-		return LIST;
+	public String addNewCategory(@Valid @ModelAttribute("addcategories") Category category,Model model, Errors error) {
+		if(error.hasErrors()) {
+			return "add-category-form";
+		}
+		else {
+			try {
+				categoryService.save(category);
+				return LIST;
+			}catch (Exception e) {
+				model.addAttribute("message",":(category does not exist");
+			}
+		}
+		return "add-category-form";
 	}
 
 	@GetMapping("/updateCategoryform")
@@ -100,9 +113,20 @@ public class AdminController {
 	}
 
 	@PostMapping("/add")
-	public String addproduct(@ModelAttribute("addproduct") Product prod) {
-		productService.save(prod);
-		return "redirect:/admin/productlist";
+	public String addproduct(@Valid @ModelAttribute("addproduct") Product prod,Errors error,Model model) {
+		if(error.hasErrors()) {
+			return "add-product-form";
+		}
+		else {
+			try {
+				productService.save(prod);
+				return "redirect:/admin/productlist";
+			}catch (Exception e) {
+				model.addAttribute("message",":(Failed to add product");
+			}
+		}
+		return "add-product-form";
+		
 	}
 
 	@GetMapping("/updateProductform")
@@ -128,10 +152,6 @@ public class AdminController {
 	@GetMapping("/getcategoryproduct")
 	public String getCategoryProductDetails(@RequestParam("categoryNo") int id, Model model) {
 		Category category = categoryService.findByCategoryNo(id);
-		if (category == null) {
-			System.out.println("debug:category is null");
-			return "null";
-		}
 		model.addAttribute("getcategory", category);
 		model.addAttribute("getproductlist", productService.findByCategoryNo(id));
 		return "category-product";
@@ -140,10 +160,6 @@ public class AdminController {
 	@GetMapping("/getproductbilling")
 	public String getProductBilling(@RequestParam("id") long id, Model model) {
 		List<BillingInvoice> product = productService.findAllByProductId(id);
-		if (product == null) {
-			System.out.println("debug:product is null");
-			return "null";
-		}
 		model.addAttribute("getproduct", product);
 		model.addAttribute("getbilling", billService.findByBillId(id));
 		return "product-billing";

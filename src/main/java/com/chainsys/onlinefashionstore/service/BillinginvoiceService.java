@@ -29,6 +29,8 @@ public class BillinginvoiceService {
 			return billinvoiceRepo.findAll();
 		}
 
-
+      public List<BillingInvoice> userEmail(String userEmail) {
+    	  return billinvoiceRepo.getUserEmail(userEmail);
+      }
 }
 

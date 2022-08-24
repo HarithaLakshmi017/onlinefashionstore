@@ -2,9 +2,12 @@ package com.chainsys.onlinefashionstore.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,7 +29,7 @@ public class BillinginvoiceController {
 	@GetMapping("/billinginvoice")
 	public String getBillDetailsAll(Model model) {
 		List<BillingInvoice> billinvoicelist = billinvoiceservice.findAll();
-		model.addAttribute("allbillinvoice", billinvoicelist);
+		model.addAttribute("orderdetail", billinvoicelist);
 		return "list-billinvoice";
 	}
 
@@ -44,14 +47,24 @@ public class BillinginvoiceController {
 		model.addAttribute("addbilldetail", billinvoicelist);
 		billinvoicelist.setProductId(id);
 		billinvoicelist.setRate(pro.getRate());
+		billinvoicelist.setProductName(pro.getProductName());
 		return "add-billinginvoice-form";
 	}
 
 	@PostMapping("/addbillinvoice")
-	public String addNewbill(@ModelAttribute("addbilldetail") BillingInvoice billinvoicelist,Model model) {
-		billinvoiceservice.save(billinvoicelist);
-		model.addAttribute("productId",billinvoicelist);
-		return "redirect:/admin/successpage";
+	public String addNewbill(@Valid @ModelAttribute("addbilldetail") BillingInvoice billinvoicelist,Errors error,Model model) {
+		if(error.hasErrors()) {
+			return "add-billinginvoice-form";
+		}
+		else {
+			try {
+				billinvoiceservice.save(billinvoicelist);
+				return "redirect:/admin/successpage";
+			}catch (Exception e) {
+				model.addAttribute("message",":(Failed to add bill");
+			}
+		}
+		return "add-billinginvoice-form";
 	}
 
 	@GetMapping("/updatebillinvoiceform")
@@ -62,9 +75,20 @@ public class BillinginvoiceController {
 	}
 
 	@PostMapping("/updatebill")
-	public String updateBill(@ModelAttribute("updatebilling") BillingInvoice billinvoicelist) {
-		billinvoiceservice.save(billinvoicelist);
-		return "redirect:/billinginvoice";
+	public String updateBill(@Valid @ModelAttribute("updatebilling") BillingInvoice billinvoicelist,Model model, Errors error) {
+		if(error.hasErrors()) {
+			return "update-billinvoice-form";
+		}
+		else {
+			try {
+				billinvoiceservice.save(billinvoicelist);
+				return "redirect:/billinginvoice";
+			}catch (Exception e) {
+				model.addAttribute("message", ":(Bill update failed");
+			}
+		}
+		return "update-billinvoice-form";
+		
 	}
 
 	@GetMapping("/deletebillinvoice")
@@ -87,5 +111,15 @@ public class BillinginvoiceController {
 		billinvoiceservice.save(billinvoice);
 		return "add-billinvoice-form";
 	}
-
+	@GetMapping("/getfilteremail")
+	public String getEmailForm() {
+		return "get-filter-email";
+	}
+	
+	@GetMapping("/useremail")
+	public String getAllStatus(@RequestParam("userEmail") String userEmail, Model model) {
+		List<BillingInvoice> email = billinvoiceservice.userEmail(userEmail);
+		model.addAttribute("orderdetail", email);
+		return "list-billinvoice";
+	}
 }

@@ -1,7 +1,7 @@
 create table category
 (
 category_no number(20) primary key,
-category_name varchar(30)
+category_name varchar2(30)
 );
 --------------------------------------------------
 
@@ -33,26 +33,20 @@ CONSTRAINT CATEGORY_FK FOREIGN KEY (CATEGORY_NO) REFERENCES CATEGORY (CATEGORY_N
 
 CREATE TABLE BILLING_INVOICE(
 BILLING_ID NUMBER PRIMARY KEY,
-BILL_DATE NUMBER,
-USER_ID NUMBER,
+BILL_DATE DATE,
+USER_EMAIL VARCHAR2(100),
 PRODUCT_ID NUMBER,
 QUANTITY NUMBER,
 RATE NUMBER,
 BILL_AMOUNT FLOAT,
 MODE_OF_PAYMENT VARCHAR2(50),
-CONSTRAINT BILL_1 FOREIGN KEY (USER_ID) REFERENCES USERS_DETAIL (USER_ID),
 CONSTRAINT BILL_2 FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCT (PRODUCT_ID));
-
 ---------------------------------------------------------------------------------------
-
 create table feedback
 (
-email_id varchar2(30),
+feedback_id varchar2(30) primary key,
 feed_back varchar2(100),
-user_id number(20),
-feedback_date date,
-billing_id number(20),
-CONSTRAINT FEED_1 FOREIGN KEY (USER_ID) REFERENCES USERS_DETAIL (USER_ID),
-CONSTRAINT FEED_2 FOREIGN KEY (billing_id) REFERENCES BILLING_INVOICE (billing_id));
-
+email VARCHAR2(100),
+feedback_date date 
+);
 ---------------------------------------------------------------------------------------

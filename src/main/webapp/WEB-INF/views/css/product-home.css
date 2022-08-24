@@ -667,3 +667,15 @@ nav .menu {
     height: 41px;
     width: 38px;
 }
+.orders {
+    position: absolute;
+	font-size: 16px;
+	right: 160px;
+	border: none;
+	outline: none;
+	color: #DA70D6;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+}

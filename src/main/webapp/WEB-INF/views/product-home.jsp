@@ -10,6 +10,12 @@
 <style>
 <%@include file="/WEB-INF/views/css/product-home.css"%>
 </style>
+<style type="text/css">
+#pre {
+text-decoration: none;
+color: #DA70D6;]
+}
+</style>
 </head>
 <body>
 	<nav>
@@ -23,6 +29,7 @@
 				<a href="#">Fashionista</a>
 			</div>
 			<div class="logo1">
+			<div class="orders"><a href="/getfilteremail" id="pre">Previous orders</a></div>
 				<div class="dropdown">
 					<button class="dropbtn">Category</button>
 					<div class="dropdown-content">
@@ -32,6 +39,7 @@
 				</div>
 				<ul>
 				</ul>
+			</div>
 			</div>
 	</nav>
 	<div class="img"></div>

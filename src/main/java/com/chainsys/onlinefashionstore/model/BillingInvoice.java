@@ -26,6 +26,8 @@ public class BillingInvoice {
 	private long billingId;
 	@Column(name = "PRODUCT_ID")
 	private long productId;
+	@Column(name="PRODUCT_NAME")
+	private String productName;
 	@Column(name = "QUANTITY")
 	private int quantity;
 	@Column(name = "RATE")
@@ -37,10 +39,6 @@ public class BillingInvoice {
 	private String modeOfPayment;
 	@Column(name = "BILL_DATE")
 	private Date billDate;
-	
-//	@ManyToOne(fetch=FetchType.LAZY)
-//	@JoinColumn(name = "USER_ID", nullable = false, updatable = false, insertable = false)
-//	private Usersdetail usersdetail;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name= "PRODUCT_ID", nullable = false, updatable = false, insertable = false)
@@ -110,14 +108,6 @@ public class BillingInvoice {
 		this.billDate = billDate;
 	}
 
-//	public Usersdetail getUsersdetail() {
-//		return usersdetail;
-//	}
-//
-//	public void setUsersdetail(Usersdetail usersdetail) {
-//		this.usersdetail = usersdetail;
-//	}
-
 	public Product getProduct() {
 		return product;
 	}
@@ -125,7 +115,13 @@ public class BillingInvoice {
 	public void setProduct(Product product) {
 		this.product = product;
 	}
+	public String getProductName() {
+		return productName;
+	}
 
-	
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
 	
 }

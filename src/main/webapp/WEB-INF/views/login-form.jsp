@@ -7,6 +7,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login Here</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 <%@include file="/WEB-INF/views/css/login-form.css"%>
 </style>
@@ -26,6 +27,8 @@ var userNameCheck = function() {
 </script>
 </head>
 <body>
+<a href="/home/index">
+	<button class="button3"><em class="fa fa-home"></em></button></a>
 	<h1>Login</h1>
 	<div class="box">
 		<form:form action="checkuserlogin" method="post"

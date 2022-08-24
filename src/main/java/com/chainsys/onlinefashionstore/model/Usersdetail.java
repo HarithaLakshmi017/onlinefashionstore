@@ -12,7 +12,6 @@ import javax.persistence.Table;
 @Table(name = "USERS_DETAIL")
 public class Usersdetail {
 
-	
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "USER_ID_REF")
 	@SequenceGenerator(name = "USER_ID_REF", sequenceName = "USER_ID_REF", allocationSize = 1)
 	@Id
@@ -36,8 +35,6 @@ public class Usersdetail {
 
 	@Column(name = "USER_NAME")
 	private String userName;
-//	@OneToMany(mappedBy = "usersdetail", fetch = FetchType.LAZY)
-//	List<BillingInvoice> billingInvoices = new ArrayList<>();
 
 	public int getUserId() {
 		return userId;
@@ -94,13 +91,4 @@ public class Usersdetail {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-
-//	public List<BillingInvoice> getBillingInvoices() {
-//		return billingInvoices;
-//	}
-//
-//	public void setBillingInvoices(List<BillingInvoice> billingInvoices) {
-//		this.billingInvoices = billingInvoices;
-//	}
-
 }

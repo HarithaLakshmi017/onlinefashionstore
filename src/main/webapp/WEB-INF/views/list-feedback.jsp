@@ -7,31 +7,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>List-FeedBack</title>
-<style type="text/css">
-table, tb {
-	width: 50%;
-	padding: 15px;
-	text-align: left;
-}
-
-th, td {
-	border: solid 1px #FFFF00;
-	padding: 10px;
-	border-color: #FFA07A;
-}
-
-th, td {
-	color: black;
-}
-
-body {
-	background-image:
-		url('');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-}
+<style>
+<%@include file="/WEB-INF/views/css/list-feedback.css"%>
 </style>
 </head>
 <div id="table root">
@@ -61,7 +38,7 @@ body {
 					<td>${feedbacklist.feedbackDate}</td>
 					<td><a
 						href="updatefeedback?Id=${feedbacklist.feedbackId}"><input
-							onclick="change()" type="button" value="Update" id="myButton1"></input></a></td>
+							onclick="change()" type="button" value="Update" id="Button5"></input></a></td>
 
 				</tr>
                 </c:forEach>

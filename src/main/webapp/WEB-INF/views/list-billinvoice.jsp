@@ -19,33 +19,31 @@
 			<tr>
 
 				<th>User Email</th>
+				<th>Billing Id</th>
 				<th>Product Id</th>
+				<th>Product Name</th>
 				<th>Quantity</th>
 				<th>Rate</th>
-				<th>Bill Amount</th>
-				<th>Mode Of Payment</th>
-				<th>Billing Id</th>
 				<th>Bill Date</th>
+				<th>Mode Of Payment</th>
+				<th>Bill Amount</th>
 			</tr>
 		</thead>
 
 		<tbody>
 
-			<c:forEach var="listbillinvoice" items="${allbillinvoice}">
+			<c:forEach var="listbillinvoice" items="${orderdetail}">
                     <tr>
 
 					<td>${listbillinvoice.userEmail}</td>
 					<td>${listbillinvoice.billingId}</td>
 					<td>${listbillinvoice.productId}</td>
+					<td>${listbillinvoice.productName}</td>
 					<td>${listbillinvoice.quantity}</td>
 					<td>${listbillinvoice.rate}</td>
-					<td>${listbillinvoice.billAmount}</td>
-					<td>${listbillinvoice.modeOfPayment}</td>
 					<td>${listbillinvoice.billDate}</td>
-                 <td><a href="updatebillinvoiceform?Id=${listbillinvoice.userEmail}"><input
-                            onclick="change()" type="button" value="Update" id="myButton1"></input></a></td>
-                    <td><a href="deletebillinvoice?Id=${listbillinvoice.userEmail}"><input
-                            onclick="change()" type="button" value="Delete" id="myButton2"></input></a></td>
+					<td>${listbillinvoice.modeOfPayment}</td>
+					<td>${listbillinvoice.billAmount}</td>
 				</tr>
                 </c:forEach>
 		</tbody>

@@ -9,9 +9,11 @@
 <style type = "text/css">
 <%@include file="/WEB-INF/views/css/add-category-form.css"%>
 </style>
+
 </head>
 <body>
 	<h1>Add Category Name</h1>
+	<div id="errormessage">${message}</div>
 	<div id="table root">
 		<div id="form">
 			<form:form action="addcat" method="post"
@@ -28,7 +30,7 @@
 				<div>
 					<form:input path="categoryName" />
 				</div>
-
+        
 				<form:button>Add New</form:button>
 			</form:form>
 		</div>

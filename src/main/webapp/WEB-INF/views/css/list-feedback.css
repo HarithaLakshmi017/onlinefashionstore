@@ -1,5 +1,7 @@
 @charset "ISO-8859-1";
 
+@charset "ISO-8859-1";
+
 h1, h2, h3 {
     text-align: center;
 }
@@ -37,21 +39,7 @@ table.center {
     margin-left: auto;
     margin-right: auto;
 }
-#Button3
-{
-  background-color: #DA70D6;
-  color: #000;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 12px;
-}
-
-#Button4
+#Button5
 {
   background-color: #DA70D6;
   color: #000;

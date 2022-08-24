@@ -7,12 +7,16 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Bill Invoice</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 <%@include file="/WEB-INF/views/css/add-billinginvoice-form.css"%>
 </style>
 </head>
 <body>
+	<a href="/home/index">
+	<button class="button3"><em class="fa fa-home"></em></button></a>
 	<h1>Payment Gateway</h1>
+	<div id="errormessage">${message}</div>
 	<div class="box">
 		<div id="root">
 			<form:form action="addbillinvoice" method="post"
@@ -39,6 +43,13 @@
 			
 				<div>
 					<form:input path="productId" type="hidden" />
+				</div>
+					</div>
+					<div>
+					<label for="productName"></label>
+			
+				<div>
+					<form:input path="productName" type="hidden" />
 				</div>
 					</div>
 				<div>
