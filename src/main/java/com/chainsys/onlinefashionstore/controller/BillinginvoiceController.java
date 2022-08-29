@@ -2,6 +2,8 @@ package com.chainsys.onlinefashionstore.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,12 +39,16 @@ public class BillinginvoiceController {
 	public String findDetailById(@RequestParam("id") long id, Model model) {
 		BillingInvoice billinvoicelist = billinvoiceservice.findByBillId(id);
 		model.addAttribute("findById", billinvoicelist);
+		model.addAttribute("billingId",id);
 		return "find-billinvoice-id-form";
 	}
 
 	@GetMapping("/addbillinvoiceform")
-	public String showAddForm(@RequestParam("id") long id,Model model) {
+	public String showAddForm(@RequestParam("id") long id,Model model,HttpServletRequest request) {
 		BillingInvoice billinvoicelist = new BillingInvoice();
+		HttpSession session = request.getSession();
+		String email = (String) session.getAttribute("email");
+		billinvoicelist.setUserEmail(email);
 		Product pro = productservice.findById(id);
 		model.addAttribute("addbilldetail", billinvoicelist);
 		billinvoicelist.setProductId(id);
@@ -59,7 +65,7 @@ public class BillinginvoiceController {
 		else {
 			try {
 				billinvoiceservice.save(billinvoicelist);
-				return "redirect:/admin/successpage";
+				return "redirect:/admin/successpage?id="+billinvoicelist.getBillingId();
 			}catch (Exception e) {
 				model.addAttribute("message",":(Failed to add bill");
 			}
@@ -112,7 +118,12 @@ public class BillinginvoiceController {
 		return "add-billinvoice-form";
 	}
 	@GetMapping("/getfilteremail")
-	public String getEmailForm() {
+	public String getEmailForm(HttpServletRequest request, Model model) {
+		BillingInvoice billinvoicelist = new BillingInvoice();
+		HttpSession session = request.getSession();
+		String email = (String) session.getAttribute("email");
+		billinvoicelist.setUserEmail(email);
+		model.addAttribute("addbilldetail", billinvoicelist);
 		return "get-filter-email";
 	}
 	

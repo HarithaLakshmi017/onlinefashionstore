@@ -49,6 +49,7 @@
 </script>
 <body>
 	<h1>Sign Up</h1>
+	 <div id="errormessage">${message}</div>
 	<div id="root" class="box">
 		<div id="form">
 			<form:form action="register" method="post" modelAttribute="users"

@@ -16,7 +16,6 @@ public interface UsersdetailRepository extends JpaRepository<Usersdetail, Intege
 	@SuppressWarnings("unchecked")
 	Usersdetail save(Usersdetail usersdetail);
 
-	// use for adding a new user
 	void deleteById(int id);
 
 	List<Usersdetail> findAll();

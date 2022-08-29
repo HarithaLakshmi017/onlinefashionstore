@@ -28,7 +28,7 @@
 					<form:input path="userEmail"
 						pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
 						placeholder="Enter Email" title="Enter Valid Email"
-						required="true" />
+						required="true" readonly="true"/>
 				</div>
 				</div>
 				<div>

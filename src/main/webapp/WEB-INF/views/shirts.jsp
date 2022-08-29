@@ -54,7 +54,6 @@
 				<a href="/admin/updateProductform?id=138"><h2>checked regular fit shirt</h2></a>
 					</div>
 		</section>
-		<!-- Footer Section -->
 		<div class="footer__container"></div>
 	</div>
 </body>

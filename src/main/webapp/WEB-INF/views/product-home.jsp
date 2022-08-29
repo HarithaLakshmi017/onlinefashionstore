@@ -29,7 +29,7 @@ color: #DA70D6;]
 				<a href="#">Fashionista</a>
 			</div>
 			<div class="logo1">
-			<div class="orders"><a href="/getfilteremail" id="pre">Previous orders</a></div>
+			<div class="orders"><a href="/getfilteremail" id="pre">Your orders</a></div>
 				<div class="dropdown">
 					<button class="dropbtn">Category</button>
 					<div class="dropdown-content">

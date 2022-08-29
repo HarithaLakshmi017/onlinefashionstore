@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,11 +14,11 @@
     <h3>Enter email to get previous order</h3>
     <br>
     <div class="box">
-    <form action="useremail" method="get" style="margin: 0;">
-        <label class="label">Email</label> <input id="email" type="text" placeholder="Enter email"
-            name="userEmail" required>
+    <form:form action="useremail" method="get" modelAttribute="addbilldetail" style="margin: 0;">
+        <label class="label">Email</label> 
+        <form:input path="userEmail" type="text" placeholder="Enter email" readonly="true" />
              <input id="get" type='submit' value="Get" name="submit">
-    </form>
+    </form:form>
     </div>
 </body>
 </html>

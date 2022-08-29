@@ -2,6 +2,7 @@ package com.chainsys.onlinefashionstore.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,7 @@ public class UsersdetailController {
 		model.addAttribute("users", theuser);
 		return "login-form";
 	}
+
 	@GetMapping("/userlist")
 	public String product(Model model) {
 		List<Usersdetail> userlist = usersdetailservice.getAllUserdetails();
@@ -43,6 +45,7 @@ public class UsersdetailController {
 		return "users-list";
 
 	}
+
 	@GetMapping("/updateuserform")
 	public String showUpdateForm(@RequestParam("id") int id, Model model) {
 		Usersdetail theuser = usersdetailservice.findUsersdetailById(id);
@@ -71,14 +74,18 @@ public class UsersdetailController {
 
 	@PostMapping("/register")
 	public String adduser(@Valid @ModelAttribute("users") Usersdetail userregister, Model model, Errors errors) {
+		try {
 		if (errors.hasErrors()) {
 			return "register";
 		}
 		userdetailrepo.save(userregister);
 		return "redirect:/user/login";
+	}catch(Exception e) {
+		model.addAttribute("message",":(Failed to sign up");
+		return "register";
+	}
 	}
 
-	
 	@GetMapping("/getuserbilling")
 	public String getUsersbilling(@RequestParam("id") int id, Model model) {
 		BillingInvoice billinginvoice = billingservice.findByBillId(id);
@@ -92,20 +99,23 @@ public class UsersdetailController {
 	}
 
 	@PostMapping("/checkuserlogin")
-	public String checkingAccess(@ModelAttribute("users") Usersdetail user,Model model) {
+	public String checkingAccess(@ModelAttribute("users") Usersdetail user, Model model, HttpSession session) {
 		Usersdetail users = usersdetailservice.getUserNameAndPasswordAndRole(user.getUserName(), user.getPassword(),
 				user.getRole());
 		if (users != null) {
 			if ("admin".equals(users.getRole())) {
 				return "redirect:/admin/adminview";
-				
+
 			} else {
+				session.setAttribute("email", users.getEmail());
 				return "redirect:/admin/product";
 			}
 		} else {
+
 			model.addAttribute("result", "Invalid UserName or Password");
+
 			return "login-form";
 		}
-		
+
 	}
 }

@@ -2,9 +2,12 @@ package com.chainsys.onlinefashionstore.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,9 +40,19 @@ public class FeedBackController {
 	}
 
 	@PostMapping("/addfb")
-	public String addNewUser(@ModelAttribute("addfeedback") FeedBack feedbacklist) {
+	public String addNewUser(@Valid @ModelAttribute("addfeedback") FeedBack feedbacklist, Errors error, Model model) {
+		if(error.hasErrors()) {
+			return "add-feedback-form";
+		}
+		else {
+			try {
 		feedbckservice.save(feedbacklist);
 		return "redirect:/admin/feedbacksuccess";
+	} catch(Exception e) {
+		model.addAttribute("message",":(Failed to add feedback");
+	}
+		}
+		return "add-feedback-form";
 	}
 
 	@GetMapping("/updatefeedback")

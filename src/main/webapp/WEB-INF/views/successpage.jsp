@@ -24,9 +24,8 @@
             <div class="content">
                <h1>Payment Success !</h1>
                <p>Hello there,Your order will be delivered soon!</p>
-               <a href="/admin/product">Go to Home</a>
+               <a href="/findbillinvoiceid?id=${billilist}">Print Bill</a>
             </div>
-            
          </div>
       </div>
    </div>

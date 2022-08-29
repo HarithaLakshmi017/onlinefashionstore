@@ -205,7 +205,10 @@ public class AdminController {
 		return "about";
 	}
 	@GetMapping("/successpage")
-	public String sucesspage(Model model) {
+	public String sucesspage(@RequestParam("id") long id,Model model) {
+	 BillingInvoice billinvoicelist = billService.findByBillId(id);
+	 model.addAttribute("findById", billinvoicelist);
+	 model.addAttribute("billilist",id);
 	 return "successpage";
 }
 	@GetMapping("/womenjackets")

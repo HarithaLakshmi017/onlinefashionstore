@@ -98,3 +98,9 @@ label {
   cursor: pointer;
 }
 .button4 {border-radius: 12px;}
+
+#errormessage {
+	text-align: center;
+	color: #fff;
+	font-size: 35px;
+}

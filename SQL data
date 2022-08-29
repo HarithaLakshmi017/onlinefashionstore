@@ -3,6 +3,7 @@ create table category
 category_no number(20) primary key,
 category_name varchar2(30)
 );
+
 --------------------------------------------------
 
 CREATE TABLE USERS_DETAIL(
@@ -41,6 +42,7 @@ RATE NUMBER,
 BILL_AMOUNT FLOAT,
 MODE_OF_PAYMENT VARCHAR2(50),
 CONSTRAINT BILL_2 FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCT (PRODUCT_ID));
+
 ---------------------------------------------------------------------------------------
 create table feedback
 (
