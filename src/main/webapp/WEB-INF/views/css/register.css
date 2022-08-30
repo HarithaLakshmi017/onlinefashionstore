@@ -9,12 +9,12 @@ body {
 }
 
 h1 {
-	color: #DA70D6;
+	color: #000;
 	text-align: center;
 }
 
 label {
-	color: #fff;
+	color: #000;
 	font-size: 1.3em;
 	display: flex;
 	margin: 5px;

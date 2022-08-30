@@ -27,14 +27,14 @@
 							pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$"
 							title="Enter valid email ex: example@gmail.com" required="true" />
 					</div>
-					<div>
+					<%-- <div>
 						<label for="feedback">FeedBack</label>
 					</div>
 					<div>
 						<form:input path="feedback" placeholder="enter feedback"
 							pattern="[a-zA-Z]{5,40}{  }"
 							title="Enter feedback" required="true"/>
-					</div>
+					</div> --%>
 					<div>
 						<label for="feedbackId"></label>
 					</div>
@@ -49,7 +49,20 @@
 							pattern="^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$"
 						 required="true"/>
 					</div>
-
+					<div>
+						<label for="feedback">FeedBack Rate</label>
+					</div>
+					<div class="rating">
+    <input type="radio" name="feedback" value="5" id="5"><label for="5"> </label>
+    <input type="radio" name="feedback" value="4" id="4"><label for="4"> </label>
+    <input type="radio" name="feedback" value="3" id="3"><label for="3"> </label>
+    <input type="radio" name="feedback" value="2" id="2"><label for="2"> </label>
+    <input type="radio" name="feedback" value="1" id="1" checked><label for="1"> </label>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
 					<button class="button button4">Add Feedback</button>
 				</form:form>
 			</div>
